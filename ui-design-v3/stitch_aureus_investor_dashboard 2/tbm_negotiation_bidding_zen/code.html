@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aureus Capital | Live Negotiation Room</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#785a1a",
+              "on-tertiary-container": "#624604",
+              "error-dim": "#4e0309",
+              "tertiary-fixed": "#fbd185",
+              "primary-fixed": "#d6e3ff",
+              "surface-container": "#eaeff1",
+              "on-secondary": "#f7f9ff",
+              "surface-bright": "#f8f9fa",
+              "on-surface": "#2b3437",
+              "primary": "#465f88",
+              "tertiary-container": "#fbd185",
+              "inverse-surface": "#0c0f10",
+              "surface-container-high": "#e3e9ec",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#596069",
+              "secondary-dim": "#4d545d",
+              "on-secondary-container": "#4b525c",
+              "on-primary": "#f6f7ff",
+              "outline-variant": "#abb3b7",
+              "secondary-container": "#dce3ee",
+              "on-error": "#fff7f6",
+              "surface": "#f8f9fa",
+              "inverse-primary": "#aec7f6",
+              "on-surface-variant": "#586064",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "surface-variant": "#dbe4e7",
+              "tertiary-dim": "#6b4e0e",
+              "surface-tint": "#465f88",
+              "primary-dim": "#3a537b",
+              "on-primary-container": "#39527a",
+              "primary-fixed-dim": "#c0d5ff",
+              "surface-dim": "#d1dce0",
+              "secondary-fixed": "#dce3ee",
+              "surface-container-low": "#f1f4f6",
+              "error": "#9f403d",
+              "on-tertiary": "#fff8f1",
+              "primary-container": "#d6e3ff",
+              "surface-container-highest": "#dbe4e7",
+              "tertiary-fixed-dim": "#ecc479",
+              "secondary-fixed-dim": "#ced5e0",
+              "on-tertiary-fixed": "#4a3400",
+              "on-primary-fixed-variant": "#435c85",
+              "on-background": "#2b3437",
+              "on-primary-fixed": "#264067",
+              "inverse-on-surface": "#9b9d9e",
+              "on-error-container": "#752121",
+              "on-secondary-fixed": "#394049",
+              "on-secondary-fixed-variant": "#555c66",
+              "background": "#f8f9fa",
+              "outline": "#737c7f",
+              "error-container": "#fe8983"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm shadow-blue-900/5 flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-medium tracking-widest text-blue-950 uppercase font-headline">
+            Aureus Capital
+        </div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-Lexend font-light tracking-tight text-slate-500 hover:text-blue-900 transition-all duration-300" href="#">Marketplace</a>
+<a class="font-Lexend font-light tracking-tight text-blue-700 border-b-2 border-blue-700 pb-1 transition-all duration-300" href="#">Insights</a>
+<a class="font-Lexend font-light tracking-tight text-slate-500 hover:text-blue-900 transition-all duration-300" href="#">Concierge</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-label text-xs tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors">Login</button>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-8 py-3 rounded-md font-label text-xs tracking-widest uppercase shadow-md shadow-primary/10">Inquire</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-12 max-w-screen-2xl mx-auto grid grid-cols-12 gap-8">
+<aside class="col-span-12 lg:col-span-3 space-y-8">
+<div class="bg-surface-container-low p-8 rounded-xl">
+<p class="text-label-md uppercase tracking-[0.2em] text-outline text-[0.7rem] mb-4">Asset Identification</p>
+<h1 class="text-headline-md font-medium text-on-surface leading-tight mb-6">The Blue Meridian (TBM) Portfolio</h1>
+<div class="aspect-video w-full rounded-lg overflow-hidden bg-surface-container-high mb-6">
+<img class="w-full h-full object-cover grayscale-[0.2] opacity-90" data-alt="Modern corporate skyscraper architecture at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcHVN3SU-x4ToN13wWJVm3jMQ874vZhq6Ex1dhgKVonwmbDM2ID551-JSITlbNIQdYlDp-OPFyrxI6MZfvdxvNISvTyUzlKozVBAp49tjjlk423140Sujaky_Y19npsuoeCs8qf28640dFScLbk1-JJPADtMbcJM0puGg58x9YAFOoLlsSgBTJtJWP9yO3zgT3d9LY4uH30pT5cyg3HSGeXfGDQ5Zulr8Jv9Y_oILK1dDsGlR0_JBkwKq6bvWnbL-nYxtH4dDEzR8"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-outline-variant/15 pb-2">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant">Class</span>
+<span class="text-sm font-medium">A+ Commercial</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/15 pb-2">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant">Equity Lock</span>
+<span class="text-sm font-medium">24 Months</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant">Status</span>
+<span class="text-sm font-medium text-primary flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                            Live Auction
+                        </span>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/10">
+<p class="text-[0.7rem] uppercase tracking-[0.2em] text-outline mb-6">Deal Room Participants</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<p class="text-xs font-semibold">Institutional Lead</p>
+<p class="text-[0.65rem] text-on-surface-variant uppercase tracking-tighter">Verified Participant</p>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-50">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+</div>
+<div>
+<p class="text-xs font-semibold">Private Equity A</p>
+<p class="text-[0.65rem] text-on-surface-variant uppercase tracking-tighter">Identity Masked</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<section class="col-span-12 lg:col-span-6 space-y-8">
+<div class="bg-white rounded-xl p-10 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed/20 blur-3xl -mr-16 -mt-16"></div>
+<div class="flex justify-between items-start mb-12">
+<div>
+<p class="text-[0.7rem] uppercase tracking-[0.2em] text-primary font-medium mb-1">Current Highest Bid</p>
+<h2 class="text-4xl font-light text-on-surface">$248,500,000 <span class="text-lg text-outline-variant uppercase tracking-tighter">USD</span></h2>
+</div>
+<div class="text-right">
+<p class="text-[0.7rem] uppercase tracking-[0.2em] text-outline mb-1">Time Remaining</p>
+<p class="text-2xl font-mono text-tertiary">14:22:08</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-10">
+<div class="bg-surface-container-low p-6 rounded-lg group hover:bg-white hover:shadow-md transition-all">
+<p class="text-[0.65rem] uppercase tracking-[0.2em] text-on-surface-variant mb-4">Auction Format</p>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
+<span class="text-sm font-medium">Standard Bidding</span>
+</div>
+<button class="w-full mt-6 bg-primary text-on-primary py-3 rounded font-label text-[0.65rem] tracking-[0.2em] uppercase transition-all hover:bg-primary-dim">Place Bid</button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg group hover:bg-white hover:shadow-md transition-all">
+<p class="text-[0.65rem] uppercase tracking-[0.2em] text-on-surface-variant mb-4">Direct Acquisition</p>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary" data-icon="flash_on">flash_on</span>
+<span class="text-sm font-medium">Buy It Now</span>
+</div>
+<button class="w-full mt-6 bg-tertiary text-on-tertiary py-3 rounded font-label text-[0.65rem] tracking-[0.2em] uppercase transition-all hover:bg-tertiary-dim">Execute Buyout</button>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-[0.65rem] uppercase tracking-[0.2em] text-outline text-center mb-6">— Negotiated Private Offer —</p>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-0 rounded-lg px-6 py-4 text-sm focus:ring-1 focus:ring-primary/40 placeholder:text-outline-variant" placeholder="Propose custom acquisition price..." type="text"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-primary font-label text-[0.65rem] tracking-widest uppercase font-semibold">Submit Offer</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-sm font-medium uppercase tracking-widest">Negotiation Intelligence</h3>
+<span class="text-[0.65rem] text-outline-variant uppercase">32 Interactions Recorded</span>
+</div>
+<div class="space-y-6 max-h-[400px] overflow-y-auto pr-4 no-scrollbar">
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-white flex-shrink-0 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-sm text-tertiary" data-icon="verified_user">verified_user</span>
+</div>
+<div class="space-y-1">
+<div class="bg-white p-4 rounded-xl rounded-tl-none shadow-sm text-xs leading-relaxed text-on-surface-variant">
+                                Aureus System: New floor price established at $245M following Lead Advisor review. All participants have 12 hours to counter.
+                            </div>
+<span class="text-[0.6rem] text-outline uppercase tracking-tight">09:42 AM · System Update</span>
+</div>
+</div>
+<div class="flex gap-4 flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-on-primary" data-icon="face">face</span>
+</div>
+<div class="space-y-1 text-right">
+<div class="bg-primary text-on-primary p-4 rounded-xl rounded-tr-none shadow-sm text-xs leading-relaxed">
+                                Offer submitted: $248.5M with contingency removal upon 48h due diligence window closure.
+                            </div>
+<span class="text-[0.6rem] text-outline uppercase tracking-tight">10:15 AM · Private Bidder</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-white flex-shrink-0 flex items-center justify-center shadow-sm border border-tertiary/20">
+<span class="material-symbols-outlined text-sm text-tertiary" data-icon="support_agent">support_agent</span>
+</div>
+<div class="space-y-1">
+<div class="bg-white p-4 rounded-xl rounded-tl-none shadow-sm text-xs leading-relaxed border-l-4 border-tertiary">
+                                Advisor Insight: We suggest reviewing the "Liquidity Clause 4.2" before increasing leverage for the next bid cycle.
+                            </div>
+<span class="text-[0.6rem] text-outline uppercase tracking-tight">10:48 AM · Concierge Hud</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<aside class="col-span-12 lg:col-span-3 space-y-8">
+<div class="bg-primary-fixed/30 p-8 rounded-xl border border-primary/10">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="history_edu">history_edu</span>
+<h3 class="text-lg font-medium text-on-primary-fixed mb-4 leading-snug">Finalize Structure</h3>
+<p class="text-xs text-on-primary-fixed-variant leading-relaxed mb-8">Ready to move from negotiation to commitment? Generating a formal LOI locks the current terms for exclusive review.</p>
+<button class="w-full bg-on-primary-fixed text-primary-fixed py-4 rounded-md font-label text-[0.7rem] tracking-[0.25em] uppercase shadow-lg shadow-on-primary-fixed/20 transition-transform active:scale-95">Formalize LOI</button>
+<p class="text-[0.6rem] text-center mt-4 text-on-primary-fixed-variant opacity-60">Legal weight: Binding Intention</p>
+</div>
+<div class="bg-white p-6 rounded-xl border border-outline-variant/10">
+<h4 class="text-[0.65rem] uppercase tracking-[0.2em] text-outline mb-6">Activity Feed</h4>
+<div class="space-y-6">
+<div class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1 before:w-2 before:h-2 before:bg-tertiary-fixed before:rounded-full">
+<p class="text-xs font-medium">New Document Uploaded</p>
+<p class="text-[0.65rem] text-outline-variant">Tax Compliance Audit Q4</p>
+</div>
+<div class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1 before:w-2 before:h-2 before:bg-primary-fixed before:rounded-full">
+<p class="text-xs font-medium">Bid Retraction</p>
+<p class="text-[0.65rem] text-outline-variant">Participant ID-409 removed offer</p>
+</div>
+<div class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1 before:w-2 before:h-2 before:bg-error-container/40 before:rounded-full">
+<p class="text-xs font-medium">Counter Offer</p>
+<p class="text-[0.65rem] text-outline-variant">Institutional Lead +$2.5M</p>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<footer class="w-full border-t border-slate-100 mt-20 bg-white">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full max-w-screen-2xl mx-auto">
+<div class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400">
+                © 2024 Aureus Capital. Boutique Digital Concierge.
+            </div>
+<div class="flex gap-10 mt-8 md:mt-0">
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors" href="#">Institutional Disclosure</a>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-8 right-8 z-50">
+<div class="glass-nav bg-white/60 p-4 rounded-full shadow-2xl border border-white/50 flex items-center gap-4 pr-6">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="support_agent">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[0.6rem] uppercase tracking-widest text-outline">Advisor Online</span>
+<span class="text-xs font-medium">Marcus Aurelius Jr.</span>
+</div>
+<div class="w-px h-6 bg-outline-variant/30 ml-2"></div>
+<button class="text-[0.65rem] font-semibold uppercase tracking-widest text-primary hover:translate-x-1 transition-transform">Concierge HUD</button>
+</div>
+</div>
+</body></html>

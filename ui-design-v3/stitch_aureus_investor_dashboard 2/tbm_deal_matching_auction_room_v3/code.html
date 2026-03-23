@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#9b9d9e",
+              "on-primary-fixed-variant": "#435c85",
+              "error": "#9f403d",
+              "on-tertiary": "#fff8f1",
+              "background": "#f8f9fa",
+              "surface-tint": "#465f88",
+              "secondary-dim": "#4d545d",
+              "surface-bright": "#f8f9fa",
+              "tertiary": "#785a1a",
+              "on-tertiary-container": "#624604",
+              "error-container": "#fe8983",
+              "secondary": "#596069",
+              "error-dim": "#4e0309",
+              "primary-container": "#d6e3ff",
+              "on-error-container": "#752121",
+              "tertiary-fixed-dim": "#ecc479",
+              "on-primary": "#f6f7ff",
+              "secondary-fixed": "#dce3ee",
+              "secondary-container": "#dce3ee",
+              "tertiary-dim": "#6b4e0e",
+              "on-secondary-fixed": "#394049",
+              "on-tertiary-fixed": "#4a3400",
+              "secondary-fixed-dim": "#ced5e0",
+              "outline": "#737c7f",
+              "primary-fixed-dim": "#c0d5ff",
+              "surface-container-high": "#e3e9ec",
+              "primary-dim": "#3a537b",
+              "surface-variant": "#dbe4e7",
+              "on-error": "#fff7f6",
+              "on-secondary": "#f7f9ff",
+              "on-primary-container": "#39527a",
+              "tertiary-container": "#fbd185",
+              "outline-variant": "#abb3b7",
+              "on-secondary-container": "#4b525c",
+              "surface-dim": "#d1dce0",
+              "primary": "#465f88",
+              "surface-container-low": "#f1f4f6",
+              "on-primary-fixed": "#264067",
+              "inverse-surface": "#0c0f10",
+              "on-background": "#2b3437",
+              "inverse-primary": "#aec7f6",
+              "primary-fixed": "#d6e3ff",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "surface-container": "#eaeff1",
+              "surface": "#f8f9fa",
+              "on-secondary-fixed-variant": "#555c66",
+              "surface-container-highest": "#dbe4e7",
+              "tertiary-fixed": "#fbd185",
+              "on-surface": "#2b3437",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#586064"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(248, 249, 250, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Top Navigation Bar -->
+<nav class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-blue-950 dark:text-white">TBM Thailand</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Marketplace</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Valuation</a>
+<a class="text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1 text-xs uppercase tracking-widest font-semibold" href="#">Deal Flow</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Portfolio</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 font-medium hover:bg-blue-50/50 px-4 py-2 transition-all">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-semibold hover:opacity-90 transition-all shadow-sm">Get Verified</button>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 py-12 flex flex-col gap-12">
+<!-- Hero Section: Asset & Status -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+<div class="lg:col-span-8">
+<span class="label-md text-primary tracking-[0.2em] font-semibold mb-4 block">LIVE AUCTION ROOM ID: #TBM-882-NEG</span>
+<h1 class="text-5xl font-medium text-on-background leading-tight">Riverside Commercial Complex <br/><span class="text-on-surface-variant font-light">Negotiation Room</span></h1>
+</div>
+<div class="lg:col-span-4 flex justify-end gap-3 pb-2">
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-xs font-semibold tracking-wider text-on-surface-variant">LIVE BIDDING</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="visibility">visibility</span>
+<span class="text-xs font-semibold tracking-wider text-on-surface-variant">14 WATCHING</span>
+</div>
+</div>
+</section>
+<!-- Main Auction Interface -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Auction Status & Bidding -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Bidding Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/15 flex flex-col gap-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest font-semibold mb-2">Current Leading Bid</p>
+<div class="text-4xl font-bold text-primary tracking-tight">฿425,000,000</div>
+<p class="text-sm text-on-surface-variant mt-1">Reserve Price Met</p>
+</div>
+<div>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest font-semibold mb-2">Time Remaining</p>
+<div class="text-4xl font-mono font-medium text-error">02:14:55</div>
+<p class="text-sm text-on-surface-variant mt-1">Ends 18:00 ICT</p>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-on-surface-variant text-xs uppercase tracking-widest font-semibold mb-2">Leading Party</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="verified_user">verified_user</span>
+</div>
+<span class="text-lg font-medium">Institution #0412</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="flex-grow relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">฿</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-4 text-xl font-medium focus:ring-2 focus:ring-primary/40 transition-all" placeholder="426,000,000" type="number"/>
+</div>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all active:scale-95">Place Bid</button>
+</div>
+<p class="text-xs text-on-surface-variant text-center">Minimum increment: ฿1,000,000. All bids are legally binding.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 bg-surface-container-highest py-6 rounded-lg group transition-all hover:bg-surface-variant">
+<div class="text-left">
+<p class="text-xs uppercase tracking-widest font-semibold opacity-60">Instant Acquisition</p>
+<p class="text-xl font-bold text-on-surface">Buy It Now: ฿450M</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" data-icon="shopping_cart_checkout">shopping_cart_checkout</span>
+</button>
+<button class="flex items-center justify-center gap-3 bg-white border border-outline-variant/20 py-6 rounded-lg group transition-all hover:shadow-md">
+<div class="text-left">
+<p class="text-xs uppercase tracking-widest font-semibold opacity-60">Direct Negotiation</p>
+<p class="text-xl font-bold text-on-surface">Private Offer</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" data-icon="handshake">handshake</span>
+</button>
+</div>
+</div>
+<!-- Asset Snapshot -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low rounded-xl p-6">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="description">description</span>
+<h4 class="font-semibold text-lg mb-1">Due Diligence Kit</h4>
+<p class="text-sm text-on-surface-variant mb-4">Complete legal and financial audit documents available for verified bidders.</p>
+<button class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">Access Vault <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="map">map</span>
+<h4 class="font-semibold text-lg mb-1">Interactive Plat Map</h4>
+<p class="text-sm text-on-surface-variant mb-4">Explore property boundaries, zoning details, and local utility connections.</p>
+<button class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">Open Viewer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+</div>
+<!-- Bento Grid Details -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-highest h-64 rounded-xl overflow-hidden relative">
+<img alt="Commercial Property Exterior" class="w-full h-full object-cover" data-alt="Modern commercial building facade with glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQSJ1VLWA-bpBCuhJf_sLITJJv38WxopYf99erds_q-4YGWGCtOh9hH244Vrj_TPa5wHpic1TkX9omznYc1Oc-K5LoUndM6mZj6NmOXvhndTUxTp78v7EZtP6FxTigbXU2ECdlVtSLb62_TJCNsv-ILsDYRUcCABi3a-m_VgiscgTLYbtrEuo1D1d_f3NKIQ-sNQYOS0BVe9z_Z650f3nt0J9SVHIjR6wz5EUgSLCz9t-eexu3tTcNYnOOF1kE9snLV8ZQ28e9HAc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="text-xs font-semibold uppercase tracking-widest mb-1">Property View</p>
+<p class="text-lg font-medium">Main Plaza &amp; Entry</p>
+</div>
+</div>
+<div class="bg-primary text-on-primary rounded-xl p-6 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-3xl mb-4" data-icon="insights">insights</span>
+<h5 class="font-bold text-xl leading-tight">Projected Yield</h5>
+</div>
+<div>
+<p class="text-4xl font-light">6.8%</p>
+<p class="text-xs opacity-70 mt-1">Annual NOI Estimate</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Activity Feed & Sidebar -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- Live Activity Feed -->
+<div class="bg-surface-container-low rounded-xl flex flex-col h-[600px] border border-outline-variant/10">
+<div class="p-6 border-b border-outline-variant/10 flex justify-between items-center bg-surface-container-lowest rounded-t-xl">
+<h3 class="font-bold uppercase tracking-wider text-xs text-on-surface-variant">Live Activity Feed</h3>
+<span class="w-2 h-2 bg-error rounded-full"></span>
+</div>
+<div class="p-6 overflow-y-auto no-scrollbar flex-grow flex flex-col gap-6">
+<!-- Activity Item -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="gavel">gavel</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New Bid Placed</p>
+<p class="text-xl font-bold text-primary">฿425,000,000</p>
+<p class="text-xs text-on-surface-variant mt-1">By Institutional #0412 • 2m ago</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-4 opacity-70">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="description">description</span>
+</div>
+<div>
+<p class="text-sm font-medium">Document Accessed</p>
+<p class="text-sm text-on-surface italic">Phase II Environmental Report</p>
+<p class="text-xs text-on-surface-variant mt-1">By Private Equity #8812 • 12m ago</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="gavel">gavel</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New Bid Placed</p>
+<p class="text-xl font-bold text-primary">฿424,000,000</p>
+<p class="text-xs text-on-surface-variant mt-1">By Trust Fund #1104 • 15m ago</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-4 opacity-70">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="visibility">visibility</span>
+</div>
+<div>
+<p class="text-sm font-medium">Room Entrance</p>
+<p class="text-sm text-on-surface italic">Family Office #202 • 18m ago</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="gavel">gavel</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New Bid Placed</p>
+<p class="text-xl font-bold text-primary">฿422,500,000</p>
+<p class="text-xs text-on-surface-variant mt-1">By Institutional #0412 • 24m ago</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-container-high/50">
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-center gap-3">
+<input class="bg-transparent border-none text-sm w-full focus:ring-0" placeholder="Type message to room..." type="text"/>
+<button class="material-symbols-outlined text-primary" data-icon="send">send</button>
+</div>
+</div>
+</div>
+<!-- Advisor Card -->
+<div class="bg-secondary-fixed text-on-secondary-fixed rounded-xl p-8 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<img alt="Asset Manager" class="w-16 h-16 rounded-full object-cover border-4 border-white" data-alt="Portrait of a professional asset manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ3EUaQkXHCYYb56Rulcxr9JIYUk63mCww5L8rI6Ev_gmGbxsPV76jEevB6x07HgGxphSVHDAULJJKYyN60iZvqasgOdfLI0z-II7yi376RBE7PwJdOA4nQKDNHKOTHcMQnwyQCd6NB_nY_BmPiOy3600NQSJonRab5PjdGp3LZb1a6w7hg1dwZN-i0mlu3aJK0MmzU-i1NNrRjno8MDDcMEFhqNUav98Y8zGeuEqRBxKP4pEITIEOu0ODhWpSj7jsPVgWxlYqLKE"/>
+<div>
+<h4 class="font-bold text-lg">Piti Wattana</h4>
+<p class="text-xs uppercase tracking-widest font-semibold opacity-70">Lead Asset Manager</p>
+</div>
+</div>
+<p class="text-sm leading-relaxed">Questions regarding the bidding protocol or the structural audit? Connect directly with the asset lead.</p>
+<button class="bg-on-secondary-fixed text-secondary-fixed py-3 rounded-lg font-bold hover:shadow-xl transition-all">Direct Inquiry</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Concierge HUD -->
+<div class="fixed bottom-6 right-6 z-50">
+<div class="glass-panel p-4 rounded-full shadow-2xl flex items-center gap-6 border border-white/40">
+<div class="flex items-center gap-3 pr-6 border-r border-on-surface/10">
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant leading-none">Global Markets</p>
+<p class="text-sm font-medium text-green-600">Open</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant leading-none">SET INDEX</p>
+<p class="text-sm font-mono font-bold">1,452.12 <span class="text-xs text-green-600">+0.4%</span></p>
+</div>
+</div>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</button>
+</div>
+</div>
+<!-- Footer Space -->
+<footer class="mt-20 py-12 px-8 border-t border-outline-variant/10 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-bold tracking-tighter text-blue-950 dark:text-white">TBM Thailand</span>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-[0.2em]">Bespoke Digital Concierge for Premium Assets</p>
+</div>
+<div class="flex gap-8 text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Sale</a>
+<a class="hover:text-primary transition-colors" href="#">Compliance</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<p class="text-[10px] text-on-surface-variant/60">© 2024 Aureus Capital Group. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
