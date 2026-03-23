@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aureus Capital | Secure Access Gate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#785a1a",
+              "on-tertiary-container": "#624604",
+              "error-dim": "#4e0309",
+              "tertiary-fixed": "#fbd185",
+              "primary-fixed": "#d6e3ff",
+              "surface-container": "#eaeff1",
+              "on-secondary": "#f7f9ff",
+              "surface-bright": "#f8f9fa",
+              "on-surface": "#2b3437",
+              "primary": "#465f88",
+              "tertiary-container": "#fbd185",
+              "inverse-surface": "#0c0f10",
+              "surface-container-high": "#e3e9ec",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#596069",
+              "secondary-dim": "#4d545d",
+              "on-secondary-container": "#4b525c",
+              "on-primary": "#f6f7ff",
+              "outline-variant": "#abb3b7",
+              "secondary-container": "#dce3ee",
+              "on-error": "#fff7f6",
+              "surface": "#f8f9fa",
+              "inverse-primary": "#aec7f6",
+              "on-surface-variant": "#586064",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "surface-variant": "#dbe4e7",
+              "tertiary-dim": "#6b4e0e",
+              "surface-tint": "#465f88",
+              "primary-dim": "#3a537b",
+              "on-primary-container": "#39527a",
+              "primary-fixed-dim": "#c0d5ff",
+              "surface-dim": "#d1dce0",
+              "secondary-fixed": "#dce3ee",
+              "surface-container-low": "#f1f4f6",
+              "error": "#9f403d",
+              "on-tertiary": "#fff8f1",
+              "primary-container": "#d6e3ff",
+              "surface-container-highest": "#dbe4e7",
+              "tertiary-fixed-dim": "#ecc479",
+              "secondary-fixed-dim": "#ced5e0",
+              "on-tertiary-fixed": "#4a3400",
+              "on-primary-fixed-variant": "#435c85",
+              "on-background": "#2b3437",
+              "on-primary-fixed": "#264067",
+              "inverse-on-surface": "#9b9d9e",
+              "on-error-container": "#752121",
+              "on-secondary-fixed": "#394049",
+              "on-secondary-fixed-variant": "#555c66",
+              "background": "#f8f9fa",
+              "outline": "#737c7f",
+              "error-container": "#fe8983"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Lexend', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .anti-grid-gutter {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm shadow-blue-900/5 transition-all duration-300">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-medium tracking-widest text-blue-950 uppercase">
+                Aureus Capital
+            </div>
+<div class="hidden md:flex items-center space-gap-8 font-light tracking-tight text-slate-500">
+<a class="px-4 hover:text-blue-900 transition-colors" href="#">Marketplace</a>
+<a class="px-4 hover:text-blue-900 transition-colors" href="#">Insights</a>
+<a class="px-4 hover:text-blue-900 transition-colors" href="#">Concierge</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 hover:text-blue-900 font-light tracking-tight uppercase text-xs">Login</button>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-6 py-2 rounded-md font-medium shadow-sm hover:scale-95 transition-transform duration-200">
+                    Inquire
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-20 px-6 md:px-12 max-w-screen-xl mx-auto w-full">
+<!-- Header Section: Atmospheric Depth -->
+<header class="relative mb-20 text-center md:text-left md:pl-[10%] pr-[20%]">
+<div class="absolute -top-12 -left-8 text-7xl md:text-9xl font-medium text-primary-fixed-dim/20 pointer-events-none select-none">
+                SECURE
+            </div>
+<h1 class="text-4xl md:text-5xl font-light tracking-tight text-on-surface mb-6 leading-tight">
+                Confidential Asset <br/>
+<span class="font-normal text-primary">Verification Protocol</span>
+</h1>
+<p class="text-lg font-light text-on-surface-variant max-w-xl leading-relaxed">
+                You are attempting to access sensitive TBM architectural and financial listings. This environment is restricted to verified institutional partners and accredited private clients.
+            </p>
+</header>
+<!-- Bento Grid Layout: Verification Layers -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Left Column: NDA & Accreditation (Large) -->
+<div class="md:col-span-8 space-y-8">
+<!-- NDA Summary Card -->
+<section class="glass-panel p-10 rounded-xl border border-outline-variant/15 shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+<h2 class="text-xl font-medium tracking-tight text-blue-900">NDA Summary &amp; Terms</h2>
+</div>
+<div class="space-y-6 text-on-surface-variant font-light text-sm leading-relaxed mb-10">
+<p>This Non-Disclosure Agreement (the "Agreement") is entered into to protect proprietary digital architectural data and financial valuations belonging to Aureus Capital and its subsidiaries.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-4">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-dim mt-1" data-icon="lock">lock</span>
+<div>
+<h4 class="font-semibold text-on-surface text-xs uppercase tracking-wider mb-2">Data Protection</h4>
+<p>Recipients must maintain the highest standard of care in safeguarding confidential materials.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-dim mt-1" data-icon="history">history</span>
+<div>
+<h4 class="font-semibold text-on-surface text-xs uppercase tracking-wider mb-2">Duration</h4>
+<p>The obligation of non-disclosure shall remain in effect for a period of 5 years post-access.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary/30">
+<p class="italic">"By proceeding, you acknowledge that any breach of this protocol may result in immediate revocation of boutique status and potential legal recourse in accordance with Swiss financial statutes."</p>
+</div>
+</div>
+<!-- Digital Signature Placeholder -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg p-8 text-center flex flex-col items-center justify-center border-dashed group hover:border-primary/40 transition-colors">
+<div class="w-full max-w-md h-24 border-b border-outline-variant flex items-center justify-center mb-6 overflow-hidden">
+<span class="text-slate-300 font-light italic text-2xl group-hover:text-primary/20 transition-colors">Awaiting Signature...</span>
+</div>
+<button class="bg-gradient-to-b from-primary to-primary-dim text-on-primary px-8 py-3 rounded-md font-medium flex items-center gap-3 shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="draw">draw</span>
+                            Sign with Digital Signature
+                        </button>
+<p class="mt-4 text-[10px] uppercase tracking-widest text-slate-400">256-bit AES Encrypted Protocol</p>
+</div>
+</section>
+<!-- Accreditation Check -->
+<section class="bg-surface-container-high/40 p-10 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="account_balance">account_balance</span>
+<h2 class="text-xl font-medium tracking-tight text-blue-900">Accreditation Status</h2>
+</div>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter">Status: Pending</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-white rounded-lg shadow-sm border border-outline-variant/10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-3" data-icon="badge">badge</span>
+<span class="text-xs font-semibold uppercase text-on-surface tracking-widest mb-1">KYC / AML</span>
+<span class="text-[11px] text-on-surface-variant font-light">Verified</span>
+</div>
+<div class="p-6 bg-white rounded-lg shadow-sm border border-outline-variant/10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-slate-300 mb-3" data-icon="receipt_long">receipt_long</span>
+<span class="text-xs font-semibold uppercase text-slate-400 tracking-widest mb-1">Financials</span>
+<span class="text-[11px] text-on-surface-variant font-light">Upload Required</span>
+</div>
+<div class="p-6 bg-white rounded-lg shadow-sm border border-outline-variant/10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-slate-300 mb-3" data-icon="gavel">gavel</span>
+<span class="text-xs font-semibold uppercase text-slate-400 tracking-widest mb-1">Compliance</span>
+<span class="text-[11px] text-on-surface-variant font-light">Review Pending</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Contextual Gate Actions (Small) -->
+<aside class="md:col-span-4 space-y-8">
+<!-- Request Protocol Widget -->
+<div class="glass-panel p-8 rounded-xl shadow-lg border border-white/50">
+<h3 class="text-sm font-semibold text-blue-950 uppercase tracking-[0.2em] mb-6">Request Protocol</h3>
+<div class="space-y-4">
+<label class="block">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2 block">Institutional ID</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary/40 transition-all" placeholder="Enter Global Entity Code" type="text"/>
+</label>
+<label class="block">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2 block">Reason for Access</span>
+<select class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary/40 appearance-none">
+<option>Investment Due Diligence</option>
+<option>Strategic Partnership</option>
+<option>Acquisition Scouting</option>
+<option>Advisor Inquiry</option>
+</select>
+</label>
+<button class="w-full bg-surface-container-highest text-on-surface font-semibold py-4 rounded-md text-xs uppercase tracking-widest hover:bg-surface-bright transition-colors mt-4">
+                            Submit Access Request
+                        </button>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="support_agent">support_agent</span>
+<div>
+<p class="text-xs font-medium text-on-surface">Need assistance?</p>
+<a class="text-[11px] text-primary hover:underline underline-offset-4 font-light" href="#">Contact Private Desk</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Asset Teaser (Obfuscated) -->
+<div class="relative overflow-hidden rounded-xl h-64 group shadow-xl border border-outline-variant/10">
+<img alt="Sophisticated Office Interior" class="w-full h-full object-cover blur-md grayscale opacity-50 transition-all group-hover:scale-105" data-alt="Abstract view of luxury architecture through blurred glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCztEKXrqyNQ9cGCr6c6nn9svhTSDHJxQhXiWybP_7VYvhyYvNPrgBieJYmR7yCe5tFZEH1FBQ1g8-jqmeSd1uwE8eH0AamvGO6-U66hOjHglbO4dHNAiKqsM8K3HWDwCLr0l22q0xwZiRN8mfCjkIxrECgIFhfaIoESaZb0oHh18eYQEDNOIlQdKiT_oRyURK4euVj2gKdH9eyBperKmWRVIuFcykuuwLqC0hFK581R0NiiK9C9e5Ktzpz-vfJl1vYYPhJSlYHks"/>
+<div class="absolute inset-0 bg-gradient-to-t from-blue-950/80 to-transparent flex flex-col justify-end p-6">
+<span class="material-symbols-outlined text-white mb-2" data-icon="visibility_off">visibility_off</span>
+<h4 class="text-white font-medium tracking-tight">Project Horizon TBM</h4>
+<p class="text-blue-100/70 text-[10px] uppercase tracking-widest mt-1">Classified Listing 0982-A</p>
+</div>
+</div>
+<!-- Security Badges -->
+<div class="flex justify-center gap-6 opacity-40 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-2xl" data-icon="security">security</span>
+<span class="material-symbols-outlined text-2xl" data-icon="encryption">encrypted</span>
+<span class="material-symbols-outlined text-2xl" data-icon="shield_with_heart">shield_with_heart</span>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full border-t border-slate-100 mt-20 bg-white">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full max-w-screen-2xl mx-auto">
+<div class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 mb-6 md:mb-0">
+                © 2024 Aureus Capital. Boutique Digital Concierge.
+            </div>
+<div class="flex gap-8">
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Institutional Disclosure</a>
+</div>
+</div>
+</footer>
+<!-- Concierge HUD Component -->
+<div class="fixed bottom-8 right-8 z-40">
+<div class="glass-panel p-4 rounded-full shadow-2xl border border-white/40 flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-blue-900 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] shadow-lg hover:translate-y-[-2px] transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+                Concierge HUD
+            </button>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex gap-3 pr-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-blue-900 transition-colors" data-icon="public">public</button>
+<button class="material-symbols-outlined text-slate-400 hover:text-blue-900 transition-colors" data-icon="chat_bubble">chat_bubble</button>
+</div>
+</div>
+</div>
+</body></html>
