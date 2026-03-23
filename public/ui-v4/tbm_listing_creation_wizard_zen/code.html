@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aureus Capital | Listing Creation Wizard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#785a1a",
+              "on-tertiary-container": "#624604",
+              "error-dim": "#4e0309",
+              "tertiary-fixed": "#fbd185",
+              "primary-fixed": "#d6e3ff",
+              "surface-container": "#eaeff1",
+              "on-secondary": "#f7f9ff",
+              "surface-bright": "#f8f9fa",
+              "on-surface": "#2b3437",
+              "primary": "#465f88",
+              "tertiary-container": "#fbd185",
+              "inverse-surface": "#0c0f10",
+              "surface-container-high": "#e3e9ec",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#596069",
+              "secondary-dim": "#4d545d",
+              "on-secondary-container": "#4b525c",
+              "on-primary": "#f6f7ff",
+              "outline-variant": "#abb3b7",
+              "secondary-container": "#dce3ee",
+              "on-error": "#fff7f6",
+              "surface": "#f8f9fa",
+              "inverse-primary": "#aec7f6",
+              "on-surface-variant": "#586064",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "surface-variant": "#dbe4e7",
+              "tertiary-dim": "#6b4e0e",
+              "surface-tint": "#465f88",
+              "primary-dim": "#3a537b",
+              "on-primary-container": "#39527a",
+              "primary-fixed-dim": "#c0d5ff",
+              "surface-dim": "#d1dce0",
+              "secondary-fixed": "#dce3ee",
+              "surface-container-low": "#f1f4f6",
+              "error": "#9f403d",
+              "on-tertiary": "#fff8f1",
+              "primary-container": "#d6e3ff",
+              "surface-container-highest": "#dbe4e7",
+              "tertiary-fixed-dim": "#ecc479",
+              "secondary-fixed-dim": "#ced5e0",
+              "on-tertiary-fixed": "#4a3400",
+              "on-primary-fixed-variant": "#435c85",
+              "on-background": "#2b3437",
+              "on-primary-fixed": "#264067",
+              "inverse-on-surface": "#9b9d9e",
+              "on-error-container": "#752121",
+              "on-secondary-fixed": "#394049",
+              "on-secondary-fixed-variant": "#555c66",
+              "background": "#f8f9fa",
+              "outline": "#737c7f",
+              "error-container": "#fe8983"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      body {
+        font-family: 'Lexend', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-medium tracking-widest text-blue-950 dark:text-white uppercase">Aureus Capital</div>
+<div class="hidden md:flex gap-12 items-center font-Lexend font-light tracking-tight">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 transition-all duration-300" href="#">Marketplace</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 transition-all duration-300" href="#">Insights</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 transition-all duration-300" href="#">Concierge</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 hover:text-blue-900 text-sm font-label uppercase tracking-widest">Login</button>
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-8 py-2 rounded-md font-label uppercase tracking-widest transition-all duration-300 shadow-sm">Inquire</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto flex flex-col lg:flex-row gap-16">
+<!-- Wizard Left Content -->
+<div class="flex-1 max-w-3xl">
+<!-- Stepper Indicator -->
+<div class="mb-16 flex items-center gap-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs font-bold">1</span>
+<span class="text-xs font-label uppercase tracking-widest text-primary">Basic Info</span>
+</div>
+<div class="w-12 h-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-3 opacity-40">
+<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-xs font-bold">2</span>
+<span class="text-xs font-label uppercase tracking-widest">Financials</span>
+</div>
+<div class="w-12 h-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-3 opacity-40">
+<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-xs font-bold">3</span>
+<span class="text-xs font-label uppercase tracking-widest">Operations</span>
+</div>
+<div class="w-12 h-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-3 opacity-40">
+<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-xs font-bold">4</span>
+<span class="text-xs font-label uppercase tracking-widest">Verification</span>
+</div>
+</div>
+<header class="mb-12">
+<h1 class="text-3xl md:text-4xl font-light tracking-tight text-primary-dim mb-4">Initialize Listing</h1>
+<p class="text-on-surface-variant font-light leading-relaxed max-w-xl">Please provide the core identifiers for your asset. This information will form the bedrock of your confidential teaser.</p>
+</header>
+<!-- Form Content -->
+<section class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-2">
+<label class="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Entity Name</label>
+<input class="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface placeholder:text-outline-variant/50 transition-all outline-none" placeholder="Legal name of business" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Industry Sector</label>
+<select class="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface transition-all outline-none">
+<option>Precision Manufacturing</option>
+<option>SaaS &amp; Digital Infrastructure</option>
+<option>Biotech &amp; Life Sciences</option>
+<option>Logistics &amp; Distribution</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Executive Summary</label>
+<textarea class="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface placeholder:text-outline-variant/50 transition-all outline-none resize-none" placeholder="Describe the unique value proposition and market position..." rows="4"></textarea>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border border-outline-variant/10 flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-primary-dim mb-1">Privacy Guarantee</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Aureus Capital utilizes zero-knowledge metadata processing. Your entity's specific identity remains obfuscated until a signed NDA is validated by our concierge.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-8 border-t border-outline-variant/10">
+<button class="text-xs uppercase tracking-widest font-label text-outline hover:text-on-surface transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                        Save Draft
+                    </button>
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-12 py-4 rounded-xl font-label uppercase tracking-[0.2em] text-xs transition-all duration-300 shadow-lg shadow-primary/10">
+                        Continue to Financials
+                    </button>
+</div>
+</section>
+</div>
+<!-- Right Side Panel: Auto Estimate Calculator -->
+<aside class="w-full lg:w-[400px]">
+<div class="sticky top-32 p-10 rounded-2xl bg-white/70 backdrop-blur-xl border border-outline-variant/10 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xs uppercase tracking-[0.2em] font-medium text-primary">Live Valuation</h3>
+<div class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></div>
+</div>
+<div class="mb-10 text-center">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline mb-2">Estimated Asset Value</p>
+<div class="text-4xl font-light tracking-tighter text-on-surface">$24,500,000</div>
+<div class="text-[10px] text-emerald-600 mt-2 font-medium">+12% vs. Sector Average</div>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-widest text-outline mb-2">
+<span>LTM Revenue</span>
+<span class="text-on-surface font-semibold">$12.4M</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed-dim" style="width: 65%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-widest text-outline mb-2">
+<span>EBITDA Margin</span>
+<span class="text-on-surface font-semibold">28.4%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 42%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-widest text-outline mb-2">
+<span>Growth Multiplier</span>
+<span class="text-on-surface font-semibold">4.2x</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-dim" style="width: 80%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-sm">info</span>
+<span class="text-[10px] text-on-surface-variant leading-relaxed">This is an automated indicative range based on current private equity deal-flow in the <b>Swiss &amp; UK</b> markets.</span>
+</div>
+<button class="w-full py-4 text-[10px] uppercase tracking-[0.2em] font-medium text-primary hover:bg-primary/5 rounded-xl transition-all border border-primary/20">
+                        Detailed Appraisal
+                    </button>
+</div>
+</div>
+<!-- Trust Indicators -->
+<div class="mt-8 grid grid-cols-2 gap-4 px-2">
+<div class="text-center">
+<div class="text-lg font-medium text-on-surface">98%</div>
+<div class="text-[9px] uppercase tracking-widest text-outline">KYC Accuracy</div>
+</div>
+<div class="text-center">
+<div class="text-lg font-medium text-on-surface">ISO</div>
+<div class="text-[9px] uppercase tracking-widest text-outline">27001 Certified</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Bespoke Component: Concierge HUD -->
+<div class="fixed bottom-8 right-8 z-40">
+<div class="glass-effect bg-surface/60 p-4 rounded-full border border-outline-variant/20 shadow-xl flex items-center gap-6 pr-8">
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">support_agent</span>
+</button>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary">Concierge HUD</span>
+<span class="text-[10px] text-on-surface-variant">Advisor: Julian Vance (Online)</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 dark:text-slate-500">
+<div>© 2024 Aureus Capital. Boutique Digital Concierge.</div>
+<div class="flex gap-12 mt-6 md:mt-0">
+<a class="hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-blue-600 transition-colors" href="#">Institutional Disclosure</a>
+</div>
+</div>
+</footer>
+<!-- Background Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-[10%] left-[5%] text-[15rem] font-bold text-primary-fixed-dim opacity-[0.03] select-none uppercase">Aureus</div>
+<div class="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-primary-fixed/20 blur-[120px] rounded-full"></div>
+</div>
+</body></html>

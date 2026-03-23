@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TBM | Thailand Business Matching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#785a1a",
+              "on-tertiary-container": "#624604",
+              "error-dim": "#4e0309",
+              "tertiary-fixed": "#fbd185",
+              "primary-fixed": "#d6e3ff",
+              "surface-container": "#eaeff1",
+              "on-secondary": "#f7f9ff",
+              "surface-bright": "#f8f9fa",
+              "on-surface": "#2b3437",
+              "primary": "#465f88",
+              "tertiary-container": "#fbd185",
+              "inverse-surface": "#0c0f10",
+              "surface-container-high": "#e3e9ec",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#596069",
+              "secondary-dim": "#4d545d",
+              "on-secondary-container": "#4b525c",
+              "on-primary": "#f6f7ff",
+              "outline-variant": "#abb3b7",
+              "secondary-container": "#dce3ee",
+              "on-error": "#fff7f6",
+              "surface": "#f8f9fa",
+              "inverse-primary": "#aec7f6",
+              "on-surface-variant": "#586064",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "surface-variant": "#dbe4e7",
+              "tertiary-dim": "#6b4e0e",
+              "surface-tint": "#465f88",
+              "primary-dim": "#3a537b",
+              "on-primary-container": "#39527a",
+              "primary-fixed-dim": "#c0d5ff",
+              "surface-dim": "#d1dce0",
+              "secondary-fixed": "#dce3ee",
+              "surface-container-low": "#f1f4f6",
+              "error": "#9f403d",
+              "on-tertiary": "#fff8f1",
+              "primary-container": "#d6e3ff",
+              "surface-container-highest": "#dbe4e7",
+              "tertiary-fixed-dim": "#ecc479",
+              "secondary-fixed-dim": "#ced5e0",
+              "on-tertiary-fixed": "#4a3400",
+              "on-primary-fixed-variant": "#435c85",
+              "on-background": "#2b3437",
+              "on-primary-fixed": "#264067",
+              "inverse-on-surface": "#9b9d9e",
+              "on-error-container": "#752121",
+              "on-secondary-fixed": "#394049",
+              "on-secondary-fixed-variant": "#555c66",
+              "background": "#f8f9fa",
+              "outline": "#737c7f",
+              "error-container": "#fe8983"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .milled-button {
+            background: linear-gradient(to bottom right, #465f88, #3a537b);
+        }
+        .asymmetric-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm shadow-blue-900/5 transition-all duration-300">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-medium tracking-widest text-blue-950 uppercase font-headline">
+                Aureus Capital <span class="text-primary font-light">| TBM</span>
+</div>
+<div class="hidden md:flex items-center gap-12 font-Lexend font-light tracking-tight">
+<a class="text-blue-700 border-b-2 border-blue-700 pb-1" href="#">Marketplace</a>
+<a class="text-slate-500 hover:text-blue-900 transition-all" href="#">Insights</a>
+<a class="text-slate-500 hover:text-blue-900 transition-all" href="#">Concierge</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 font-label text-xs tracking-widest uppercase hover:text-primary transition-colors">Login</button>
+<button class="milled-button text-on-primary px-8 py-3 rounded-md font-label text-xs tracking-widest uppercase shadow-lg shadow-primary/20 hover:scale-95 duration-200">Inquire</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-12 lg:px-24 overflow-hidden">
+<div class="absolute top-0 right-0 w-2/3 h-full bg-surface-container-low asymmetric-clip -z-10">
+<div class="absolute inset-0 opacity-20" data-alt="Abstract aerial view of Bangkok cityscape" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRAtIuRoG9Qk8KD7NTdfodFWQUjiuDDkbMEjIDE1iMjfRfXK7czWIGtAQ2Yepoql42VJZ8yIrSOyu-r68PQQpWWVTu_qZZP1CTjnD52_QM7ynj-vdEsBexLpSsz8REbyUuqWI1_Ss2beshnjUpF7zFYcKUY1X48MpdbJTsZpL0loF1b2piv8IYU3Mre14oWntKsDwCbJ5OuIdZ2752Tu8bh5gGQVmbQZ4NKze1sZZzdp9ydHeIpvtC-2bx3xr3GX0b-mbaxxRis8w'); background-size: cover;"></div>
+</div>
+<div class="max-w-4xl space-y-12">
+<div class="space-y-4">
+<span class="label-md text-primary tracking-[0.3em] uppercase font-medium">Strategic Acquisitions</span>
+<h1 class="text-6xl md:text-8xl font-headline font-light leading-[1.1] tracking-tighter text-on-surface">
+                        Boutique Business <br/>
+<span class="text-primary-dim italic font-normal">Matching</span> In Thailand.
+                    </h1>
+</div>
+<p class="text-xl text-on-surface-variant font-light max-w-2xl leading-relaxed">
+                    Facilitating elite transitions between visionary founders and sophisticated global capital. Experience the Zurich-standard digital concierge for the Thai market.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 pt-4">
+<button class="group flex items-center gap-4 milled-button text-on-primary px-10 py-5 rounded-md font-label text-sm tracking-widest uppercase shadow-xl shadow-primary/25">
+                        I Want to Sell
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="flex items-center gap-4 bg-surface-container-highest text-on-surface px-10 py-5 rounded-md font-label text-sm tracking-widest uppercase hover:bg-surface-bright transition-all">
+                        I Want to Invest
+                    </button>
+</div>
+</div>
+<!-- Watermark text -->
+<div class="absolute bottom-10 right-10 select-none pointer-events-none">
+<span class="text-[12rem] font-headline font-bold text-primary-fixed-dim/20 leading-none">TBM</span>
+</div>
+</section>
+<!-- Stats Section (Tonal Shift) -->
+<section class="bg-surface-container-low py-32 px-12 lg:px-24">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-headline font-light tracking-tight text-on-surface">The Premier Ecosystem <br/>for Institutional Growth</h2>
+<p class="text-on-surface-variant font-light text-lg">Our curated approach ensures that every match is not just a transaction, but a strategic alignment of values and vision.</p>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="space-y-2 border-l-2 border-primary/20 pl-8">
+<div class="text-5xl font-headline font-medium text-primary tracking-tighter">500+</div>
+<div class="label-md text-on-surface-variant uppercase tracking-widest">Verified Businesses</div>
+</div>
+<div class="space-y-2 border-l-2 border-primary/20 pl-8">
+<div class="text-5xl font-headline font-medium text-primary tracking-tighter">200+</div>
+<div class="label-md text-on-surface-variant uppercase tracking-widest">Active Investors</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works (Bento Inspired Grid) -->
+<section class="py-32 px-12 lg:px-24 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="space-y-4 max-w-xl">
+<span class="label-md text-primary tracking-widest uppercase">Process Architecture</span>
+<h2 class="text-5xl font-headline font-light tracking-tight text-on-surface">How It Works</h2>
+</div>
+<div class="text-on-surface-variant max-w-xs font-light italic">
+                    "Precision-engineered phases to protect anonymity and maximize deal velocity."
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container p-10 rounded-xl space-y-24 group hover:bg-surface-container-high transition-all">
+<span class="text-6xl font-headline font-extrabold text-white/50 block">01</span>
+<div>
+<h3 class="title-md mb-2">Discovery</h3>
+<p class="text-on-surface-variant font-light text-sm">Onboarding via our boutique concierge interface to define objectives.</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-10 rounded-xl space-y-24 group hover:bg-surface-bright transition-all">
+<span class="text-6xl font-headline font-extrabold text-white/80 block">02</span>
+<div>
+<h3 class="title-md mb-2">Verification</h3>
+<p class="text-on-surface-variant font-light text-sm">Rigorous audit of business metrics and investor liquidity.</p>
+</div>
+</div>
+<div class="bg-surface-container p-10 rounded-xl space-y-24 group hover:bg-surface-container-high transition-all">
+<span class="text-6xl font-headline font-extrabold text-white/50 block">03</span>
+<div>
+<h3 class="title-md mb-2">Matching</h3>
+<p class="text-on-surface-variant font-light text-sm">AI-driven search coupled with human advisory oversight.</p>
+</div>
+</div>
+<div class="bg-primary-dim p-10 rounded-xl space-y-24 text-on-primary">
+<span class="text-6xl font-headline font-extrabold text-white/10 block">04</span>
+<div>
+<h3 class="title-md mb-2 text-primary-fixed">Execution</h3>
+<p class="font-light text-sm opacity-80">Secure messaging and digital deal-room facilitation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features (Asymmetric Layout) -->
+<section class="py-32 bg-on-surface text-surface px-12 lg:px-24">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-5 space-y-12">
+<h2 class="text-5xl font-headline font-light leading-tight">Elite Digital <br/>Infrastructure</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary-fixed text-3xl">verified_user</span>
+<div class="space-y-2">
+<h4 class="title-md">Verified Protocols</h4>
+<p class="text-surface-variant font-light text-sm">Multi-layer KYC and business viability audits for every participant.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary-fixed text-3xl">travel_explore</span>
+<div class="space-y-2">
+<h4 class="title-md">Smart Search</h4>
+<p class="text-surface-variant font-light text-sm">Deep-learning filters that find matches based on latent growth potential.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary-fixed text-3xl">chat_bubble</span>
+<div class="space-y-2">
+<h4 class="title-md">Concierge Messaging</h4>
+<p class="text-surface-variant font-light text-sm">Encrypted, private lines directly to owners and acquisition leads.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 relative group">
+<div class="absolute inset-0 bg-primary-dim/20 rounded-2xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+<div class="relative rounded-2xl overflow-hidden h-full min-h-[400px]">
+<img alt="Professional business interaction" class="w-full h-full object-cover" data-alt="Two professionals in a modern glass office discussing data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOEjQD6HG4mcdIKElloUAZ0p7JPJabW10Wm0YNgvWibcdMBJqtXQACWJ1tjBTtM5VCg01JdzNeCXhEbb-UwaVVtyLsMZGexRKSTpPP4bJH9rbgH2XN3YparwsMz_8lpL-DaiqPdVhIrjpLmY8TS9v-f_lWW1T8QDQ1_bWvqfKQygDLdCiTYf1z4SiSNC-rr6w0OBtZIVyDXtr7zM4vcY0aZAS2-rLw8juJMGnJrisGDSUAcvC7Cprzmn4-v9XfuJTXA0jtgduBB3s"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Final Outreach -->
+<section class="py-40 px-12 text-center max-w-screen-xl mx-auto">
+<div class="space-y-12">
+<h2 class="text-6xl font-headline font-light text-on-surface">Ready for your next <br/><span class="text-primary italic">Strategic Move?</span></h2>
+<div class="flex flex-col sm:flex-row justify-center gap-8 pt-8">
+<div class="p-12 bg-white rounded-xl shadow-sm hover:shadow-xl transition-all group flex-1">
+<h3 class="title-md mb-4 uppercase tracking-widest text-primary">Founders</h3>
+<p class="text-on-surface-variant mb-8 font-light">Confidential exit strategies and valuation services.</p>
+<button class="text-primary font-label text-xs tracking-widest uppercase border-b border-primary/20 pb-2 group-hover:border-primary transition-all">List Business</button>
+</div>
+<div class="p-12 bg-white rounded-xl shadow-sm hover:shadow-xl transition-all group flex-1">
+<h3 class="title-md mb-4 uppercase tracking-widest text-primary">Investors</h3>
+<p class="text-on-surface-variant mb-8 font-light">Access to off-market high-yield Thai enterprises.</p>
+<button class="text-primary font-label text-xs tracking-widest uppercase border-b border-primary/20 pb-2 group-hover:border-primary transition-all">View Deals</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Concierge HUD -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="glass-nav p-4 rounded-full shadow-2xl border border-white/20 flex items-center gap-4">
+<div class="bg-primary p-2 rounded-full text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</div>
+<div class="pr-4 hidden sm:block">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant leading-none">Concierge</p>
+<p class="font-headline font-medium text-xs text-on-surface">Online Now</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-100 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full max-w-screen-2xl mx-auto">
+<p class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400">
+                © 2024 Aureus Capital. Boutique Digital Concierge.
+            </p>
+<div class="flex gap-12 mt-8 md:mt-0 font-Lexend text-xs font-light tracking-widest uppercase text-slate-400">
+<a class="hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-blue-600 transition-colors" href="#">Institutional Disclosure</a>
+</div>
+</div>
+</footer>
+</body></html>

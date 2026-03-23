@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
-/* Custom styles */
+/* Custom styles from HTML */
 .glass-nav {
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -15,28 +16,32 @@
   scrollbar-width: none;
 }
 
-/* Milled button gradient */
 .milled-button {
-  background: linear-gradient(135deg, #465f88 0%, #3a537b 100%);
+  background: linear-gradient(to bottom right, #465f88, #3a537b);
 }
 
-/* Text responsive sizes */
-.text-label-md {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-body-lg {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-/* Custom clip paths if needed */
 .asymmetric-clip {
-  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
 
-/* Selection color */
 ::selection {
   background-color: #c0d5ff;
+}
+
+/* Typography utilities */
+.label-md {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+.title-md {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+/* Material symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
 }
