@@ -6,7 +6,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       {/* TopNavBar */}
-      <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm shadow-primary/5 transition-all duration-300">
+      <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm shadow-blue-900/5 transition-all duration-300">
         <div className="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
           {/* Logo */}
           <div className="text-xl font-medium tracking-widest text-blue-950 uppercase font-headline">
