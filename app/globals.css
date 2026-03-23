@@ -1,19 +1,14 @@
 @import "tailwindcss";
 
-/* Custom styles from HTML */
+/* Custom styles from HTML - DO NOT MODIFY */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
 .glass-nav {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .milled-button {
@@ -28,7 +23,7 @@
   background-color: #c0d5ff;
 }
 
-/* Typography utilities */
+/* Typography utilities from HTML */
 .label-md {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -41,7 +36,11 @@
   font-weight: 600;
 }
 
-/* Material symbols */
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
