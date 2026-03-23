@@ -1,15 +1,1 @@
-"use client";
-
-import { useEffect } from "react";
-
-export default function PEMarketplacePage() {
-  useEffect(() => {
-    window.location.href = "/static/03-pe-marketplace.html";
-  }, []);
-
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-    </div>
-  );
-}
+"use client"; import Link from "next/link"; export default function PEMarketplacePage() { return (<div className="min-h-screen bg-surface"><header className="glass-nav shadow-sm"><div className="max-w-screen-2xl mx-auto px-12 py-6"><div className="text-xl font-medium tracking-widest text-blue-950 uppercase font-headline">Aureus Capital <span className="text-primary font-light">| TBM</span></div></div></header><main className="max-w-screen-2xl mx-auto px-12 py-12"><h1 className="text-4xl font-headline font-light tracking-tight text-on-surface mb-4">PE Marketplace</h1><p className="text-lg text-on-surface-variant mb-8">Institutional-grade investment opportunities</p><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{[1,2,3,4].map((i) => (<Link key={i} href="/listing/1" className="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline/10 hover:shadow-xl transition-all"><div className="h-48 bg-gradient-to-br from-primary/20 to-primary-fixed/30"></div><div className="p-6"><span className="text-xs text-primary uppercase tracking-wider font-label">Private Equity</span><h3 className="text-xl font-headline font-medium text-on-surface mt-2">PE Deal {i}</h3><p className="text-sm text-on-surface-variant mt-2">Institutional investment opportunity</p><div className="text-2xl font-headline font-bold text-primary mt-4">฿{(i * 100)}M+</div></div></Link>))}</div></main></div>); }
