@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Explore | TBM Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#89f5e7",
+                        "inverse-surface": "#2d3133",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-primary-fixed-variant": "#173bab",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#005049",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001453",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffddb8",
+                        "secondary-container": "#86f2e4",
+                        "on-secondary-container": "#006f66",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#006a61",
+                        "surface-variant": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c4c5d5",
+                        "on-primary-container": "#a8b8ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "on-surface-variant": "#444653",
+                        "on-error-container": "#93000a",
+                        "background": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-fixed": "#00201d",
+                        "primary-fixed": "#dde1ff",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-container": "#ffa929",
+                        "surface-dim": "#d8dadc",
+                        "primary-container": "#1e40af",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "outline": "#757684",
+                        "surface-container": "#eceef0",
+                        "tertiary-container": "#6b4200",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary": "#4c2e00",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "primary": "#00288e",
+                        "surface-tint": "#3755c3",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#b8c4ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Manrope', sans-serif;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e0e3e5;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar (Shared Component Execution) -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_20px_50px_-12px_rgba(0,40,142,0.08)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-12">
+<span class="text-xl font-black tracking-tighter text-[#1E40AF]">TBM PLATFORM</span>
+<div class="hidden md:flex gap-8">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 font-semibold" href="#">Explore</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors" href="#">For Investors</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors" href="#">For Businesses</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group hidden lg:block">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-highest border-none rounded-lg w-64 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search opportunities..." type="text"/>
+</div>
+<button class="text-primary font-bold hover:opacity-80 transition-all">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-bold shadow-sm hover:scale-[0.98] transition-all">Sign Up</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-screen-2xl mx-auto">
+<!-- Header Section (Editorial Layout) -->
+<header class="mb-16 grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 lg:col-span-7">
+<h1 class="text-5xl font-extrabold text-primary tracking-tight mb-4">Marketplace</h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Connecting Thailand's most promising ventures with strategic capital and operational partners. 
+                    Discovery powered by curated insights.
+                </p>
+</div>
+<div class="col-span-12 lg:col-span-5 flex justify-end gap-3 pb-2">
+<div class="flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-sm" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs font-bold tracking-[0.05em] uppercase">1,240 Verified Listings</span>
+</div>
+</div>
+</header>
+<div class="editorial-grid">
+<!-- Sidebar Filters -->
+<aside class="space-y-10 sticky top-32 h-[calc(100vh-160px)] overflow-y-auto pr-4 custom-scrollbar">
+<!-- Listing Type -->
+<section>
+<h3 class="text-xs font-bold uppercase tracking-[0.1em] text-outline mb-4">Listing Type</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 group cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary">Fundraising</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary">Business for Sale</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary">Co-founder</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary">Partner</span>
+</label>
+</div>
+</section>
+<!-- Industry -->
+<section>
+<h3 class="text-xs font-bold uppercase tracking-[0.1em] text-outline mb-4">Industry</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold">Tech</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-semibold hover:bg-surface-variant">F&amp;B</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-semibold hover:bg-surface-variant">Manufacturing</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-semibold hover:bg-surface-variant">Real Estate</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-semibold hover:bg-surface-variant">Healthcare</button>
+</div>
+</section>
+<!-- Stage -->
+<section>
+<h3 class="text-xs font-bold uppercase tracking-[0.1em] text-outline mb-4">Stage</h3>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm font-medium py-3 px-4 focus:ring-2 focus:ring-primary/20">
+<option>All Stages</option>
+<option>Idea</option>
+<option>Seed</option>
+<option>Series A</option>
+<option>Series B+</option>
+</select>
+</section>
+<!-- Location -->
+<section>
+<h3 class="text-xs font-bold uppercase tracking-[0.1em] text-outline mb-4">Location</h3>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-sm py-2 px-3 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<span class="font-medium">Bangkok</span>
+<span class="material-symbols-outlined text-sm text-primary">check</span>
+</div>
+<div class="flex items-center justify-between text-sm py-2 px-3 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<span class="text-on-surface-variant">Chiang Mai</span>
+</div>
+<div class="flex items-center justify-between text-sm py-2 px-3 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<span class="text-on-surface-variant">Phuket</span>
+</div>
+</div>
+</section>
+<!-- Investment Range -->
+<section>
+<h3 class="text-xs font-bold uppercase tracking-[0.1em] text-outline mb-4">Investment Range</h3>
+<div class="px-2">
+<input class="w-full h-1.5 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between mt-3">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider">฿100k</span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider">฿50M+</span>
+</div>
+</div>
+</section>
+<!-- Toggle -->
+<section class="pt-4 border-t border-outline-variant/20">
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-sm font-bold text-on-surface">Verified Only</span>
+<div class="relative w-11 h-6 bg-surface-container-highest rounded-full transition-colors group-hover:bg-outline-variant">
+<div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform translate-x-5 !bg-secondary"></div>
+</div>
+</label>
+</section>
+</aside>
+<!-- Listing Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 content-start">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:shadow-[0_20px_50px_-12px_rgba(0,40,142,0.08)] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="w-16 h-16 bg-primary-fixed rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">electric_bolt</span>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                                </span>
+<span class="bg-primary-container/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Fundraising</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-on-surface mb-2">NexGen AgriTech</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                            AI-driven crop yield optimization for vertical farming solutions in urban Southeast Asia.
+                        </p>
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.05em] mb-1">Target Amount</p>
+<p class="text-lg font-bold text-primary">฿12,000,000</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.05em] mb-1">Stage</p>
+<p class="text-lg font-bold">Series A</p>
+</div>
+<div class="col-span-2 flex items-center gap-2 pt-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-xs font-medium">Bangkok, Thailand</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-md font-bold text-sm tracking-wide group-hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+                        Connect with Founder <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:shadow-[0_20px_50px_-12px_rgba(0,40,142,0.08)] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-3xl">restaurant</span>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                                </span>
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Business for Sale</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-on-surface mb-2">The Emerald Bistro</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                            Established high-end fusion restaurant in Old Town with 40% YoY growth. Fully licensed and staffed.
+                        </p>
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.05em] mb-1">Asking Price</p>
+<p class="text-lg font-bold text-primary">฿25,500,000</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.05em] mb-1">Profitability</p>
+<p class="text-lg font-bold text-secondary">Profitable</p>
+</div>
+<div class="col-span-2 flex items-center gap-2 pt-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-xs font-medium">Chiang Mai, Thailand</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-md font-bold text-sm tracking-wide group-hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+                        Request NDA &amp; Financials <span class="material-symbols-outlined text-sm">lock</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 transition-all hover:shadow-[0_20px_50px_-12px_rgba(0,40,142,0.08)] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="w-16 h-16 bg-secondary-fixed-dim rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">medical_services</span>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="bg-surface-container-highest text-outline px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-1">
+                                     Verification Pending
+                                </span>
+<span class="bg-primary-container/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Partner</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-on-surface mb-2">Samui Wellness Hub</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                            Searching for a strategic healthcare management partner for a new medical tourism facility.
+                        </p>
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.05em] mb-1">Equity Offered</p>
+<p class="text-lg font-bold text-primary">15% - 25%</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-[0.05em] mb-1">Stage</p>
+<p class="text-lg font-bold">Seed</p>
+</div>
+<div class="col-span-2 flex items-center gap-2 pt-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-xs font-medium">Phuket, Thailand</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-md font-bold text-sm tracking-wide group-hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+                        Send Partnership Proposal <span class="material-symbols-outlined text-sm">handshake</span>
+</button>
+</div>
+<!-- Card 4 (Bento-style visual break/Ad) -->
+<div class="relative overflow-hidden bg-primary rounded-xl p-8 flex flex-col justify-center items-start group">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary-container rounded-full blur-[100px]"></div>
+</div>
+<h3 class="text-3xl font-extrabold text-on-primary mb-4 relative z-10 leading-tight">Can't find the perfect match?</h3>
+<p class="text-primary-fixed text-base mb-8 relative z-10 opacity-80 max-w-xs">
+                        Our premium concierge service helps you find off-market opportunities tailored to your investment thesis.
+                    </p>
+<button class="relative z-10 bg-on-primary text-primary px-6 py-3 rounded-md font-bold text-sm hover:scale-105 transition-transform">
+                        Explore Concierge
+                    </button>
+<div class="absolute bottom-6 right-6 opacity-40">
+<span class="material-symbols-outlined text-6xl text-on-primary">groups_3</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Selection Bar (Design System Unique Component) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-full max-w-xl z-50 px-4 md:px-0">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-xl p-4 flex items-center justify-between shadow-[0_20px_50px_-12px_rgba(0,40,142,0.15)] border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small avatar of a founder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmOgBYJKxE08zBxLNu2qHPP7ZAFZUkyqlP5GMS5UDt86xGjVn-18MECSrVb8HEp2jYFYmCuawyvh91qxDY3EZ_RVvKlkChMxV6pNMYYdgVDJhEjIJFIC4mFxFplMWrjgiTGlmO7XJPwREu3Ir-luJD5p9MpI4tOHaO6KcNrS45sqhKtxe-DBAhMe5-b5N0tCVPa3D4gHee_VqIsXvEDBz912L2GkjycotitqCbBSwVrAItvastNXh9azH7_EcmOTxPOKni4ZNz38c"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small avatar of a second founder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTMsOsnkJ3f9Xgzsl__XvI11krVXkB_ykgjHm42Ac9c6ZkDUdrQXOgin94LmCQm_-wX3ofIb94OKX7Xya3eM67bam_VMA57vQtt4XHinUw36nlojRO1wI82r9NuffaVx5O7sHchkLhcbnA1_7An7FX_Mxe2ni5bAzRpbt7iXyCNZaZMBGjU7S3A5CUHGnBPnZCP6bLs6oss5YV83jcLLpBcD7Z2q_unsmRBjpMm_POFOl5zkviSnz-yK8M5E2bHmAwtWgNB1yRAK0"/>
+</div>
+</div>
+<p class="text-sm font-semibold text-on-surface">2 matches selected</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 text-primary font-bold text-xs">Clear</button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-lg font-bold text-xs">Bulk Connect</button>
+</div>
+</div>
+</div>
+</body></html>

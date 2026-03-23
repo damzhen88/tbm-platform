@@ -1,0 +1,84 @@
+# TBM - Docker Compose for Local Development
+# Thailand Business Matching Platform
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    container_name: tbm-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tbm
+      POSTGRES_PASSWORD: tbm_dev_password
+      POSTGRES_DB: tbm_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - tbm_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tbm -d tbm_dev"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: tbm-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - tbm_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # Next.js Frontend + API (Development)
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: tbm-web
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://tbm:tbm_dev_password@db:5432/tbm_dev
+      - REDIS_URL=redis://redis:6379
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api/v1
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+
+  # Adminer (Database UI - Optional, enable with profile)
+  adminer:
+    image: adminer:latest
+    container_name: tbm-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    profiles:
+      - dev
+    depends_on:
+      - db
+
+volumes:
+  tbm_postgres_data:
+  tbm_redis_data:
+
+networks:
+  default:
+    name: tbm-network

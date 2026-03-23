@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Partner Dashboard | Aureus Capital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#785a1a",
+              "on-tertiary-container": "#624604",
+              "error-dim": "#4e0309",
+              "tertiary-fixed": "#fbd185",
+              "primary-fixed": "#d6e3ff",
+              "surface-container": "#eaeff1",
+              "on-secondary": "#f7f9ff",
+              "surface-bright": "#f8f9fa",
+              "on-surface": "#2b3437",
+              "primary": "#465f88",
+              "tertiary-container": "#fbd185",
+              "inverse-surface": "#0c0f10",
+              "surface-container-high": "#e3e9ec",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#596069",
+              "secondary-dim": "#4d545d",
+              "on-secondary-container": "#4b525c",
+              "on-primary": "#f6f7ff",
+              "outline-variant": "#abb3b7",
+              "secondary-container": "#dce3ee",
+              "on-error": "#fff7f6",
+              "surface": "#f8f9fa",
+              "inverse-primary": "#aec7f6",
+              "on-surface-variant": "#586064",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "surface-variant": "#dbe4e7",
+              "tertiary-dim": "#6b4e0e",
+              "surface-tint": "#465f88",
+              "primary-dim": "#3a537b",
+              "on-primary-container": "#39527a",
+              "primary-fixed-dim": "#c0d5ff",
+              "surface-dim": "#d1dce0",
+              "secondary-fixed": "#dce3ee",
+              "surface-container-low": "#f1f4f6",
+              "error": "#9f403d",
+              "on-tertiary": "#fff8f1",
+              "primary-container": "#d6e3ff",
+              "surface-container-highest": "#dbe4e7",
+              "tertiary-fixed-dim": "#ecc479",
+              "secondary-fixed-dim": "#ced5e0",
+              "on-tertiary-fixed": "#4a3400",
+              "on-primary-fixed-variant": "#435c85",
+              "on-background": "#2b3437",
+              "on-primary-fixed": "#264067",
+              "inverse-on-surface": "#9b9d9e",
+              "on-error-container": "#752121",
+              "on-secondary-fixed": "#394049",
+              "on-secondary-fixed-variant": "#555c66",
+              "background": "#f8f9fa",
+              "outline": "#737c7f",
+              "error-container": "#fe8983"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm shadow-blue-900/5 transition-all duration-300">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-medium tracking-widest text-blue-950 uppercase">Aureus Capital</div>
+<div class="hidden md:flex gap-10 font-light tracking-tight items-center">
+<a class="text-slate-500 hover:text-blue-900 transition-all duration-300" href="#">Marketplace</a>
+<a class="text-slate-500 hover:text-blue-900 transition-all duration-300" href="#">Insights</a>
+<a class="text-slate-500 hover:text-blue-900 transition-all duration-300" href="#">Concierge</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 hover:text-blue-900 text-sm font-light uppercase tracking-widest">Login</button>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-8 py-2.5 rounded-md shadow-sm hover:scale-95 duration-200 ease-out font-medium tracking-wide">Inquire</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="h-full w-64 fixed left-0 top-0 bg-slate-50 flex flex-col p-6 gap-8 pt-28 hidden lg:flex">
+<div class="flex items-center gap-3 px-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Investor Profile Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVlVvh8jkNpHSUZgTWf0bcXYcqt8uguwMdNvGf1Y7C7xmxSF0P0gSAHXaWppg_Ha3F_jsNl0NrB1hPR2qJQZV6KvMCJNOxG2gmPmPSAAJtKVWZ0P_tOjB8f_1BMxLs0wHGQkhrjFCgAaLOb-dy9rWI5PktamcevR7Pg0jjpaZ0mB2v8UHtErEUrwjKnXqmI-6Gr1rfOmFnpbCIKhW5sf46yM8ulrNSIZ4m28MlEE-kLj170ueuZ_yUK14Psg1YU3BxsV7A583bg50"/>
+</div>
+<div>
+<p class="text-sm font-bold text-blue-900 leading-tight">Aureus Private</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest">Elite Tier</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 p-3 bg-white text-blue-900 shadow-sm rounded-lg transition-transform hover:translate-x-1 duration-500" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="text-sm font-medium tracking-wide uppercase">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-slate-400 hover:text-slate-600 transition-transform hover:translate-x-1 duration-500" href="#">
+<span class="material-symbols-outlined text-xl">payments</span>
+<span class="text-sm font-medium tracking-wide uppercase">Investments</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-slate-400 hover:text-slate-600 transition-transform hover:translate-x-1 duration-500" href="#">
+<span class="material-symbols-outlined text-xl">sell</span>
+<span class="text-sm font-medium tracking-wide uppercase">Divestments</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-slate-400 hover:text-slate-600 transition-transform hover:translate-x-1 duration-500" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="text-sm font-medium tracking-wide uppercase">Documents</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-slate-400 hover:text-slate-600 transition-transform hover:translate-x-1 duration-500" href="#">
+<span class="material-symbols-outlined text-xl">support_agent</span>
+<span class="text-sm font-medium tracking-wide uppercase">Advisor</span>
+</a>
+</nav>
+<div class="space-y-2 pt-6 border-t border-slate-200">
+<a class="flex items-center gap-4 p-3 text-slate-400 hover:text-slate-600 transition-transform hover:translate-x-1 duration-500" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm font-medium tracking-wide uppercase">Settings</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-slate-400 hover:text-slate-600 transition-transform hover:translate-x-1 duration-500" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span class="text-sm font-medium tracking-wide uppercase">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 pt-32 px-8 lg:px-12 pb-24 max-w-screen-2xl">
+<!-- Hero Header -->
+<header class="mb-16">
+<h1 class="text-5xl font-light tracking-tight text-on-surface mb-2">Executive Partner <span class="font-medium text-primary">HUD</span></h1>
+<p class="text-on-surface-variant font-light max-w-2xl">Welcome back, Marcus. Your private equity portfolio is currently performing 4.2% above the benchmark for Q3.</p>
+</header>
+<!-- Portfolio Stats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-44 hover:bg-surface-container-lowest transition-all duration-300 group">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">Active Listings</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors">list_alt</span>
+</div>
+<div>
+<p class="text-4xl font-light mb-1">12</p>
+<p class="text-xs text-on-surface-variant font-light">+2 since last month</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-44 hover:bg-surface-container-lowest transition-all duration-300 group">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">Total Views</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors">visibility</span>
+</div>
+<div>
+<p class="text-4xl font-light mb-1">1.4k</p>
+<p class="text-xs text-on-surface-variant font-light">Global institutional traffic</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-44 hover:bg-surface-container-lowest transition-all duration-300 group">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">Connections</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors">hub</span>
+</div>
+<div>
+<p class="text-4xl font-light mb-1">08</p>
+<p class="text-xs text-on-surface-variant font-light">Direct LP inquiries</p>
+</div>
+</div>
+</section>
+<!-- Quick Actions & Recent Deals Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<!-- Recent Deal Alerts Bento -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low rounded-xl overflow-hidden md:col-span-2 relative h-80 flex flex-col justify-end p-8 group">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="High-rise modern architectural glass building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxEiVPa7s8IGS4Z-V5UAiRq6k7AOrAzMqacBkAxzsbeDPze2vNMTyl-XjL_Tc0R3P6hQ4UIKC6E6Ig_P1ySmSElDYLMd5off0-LFFzSwGpwA7PYDRC4GqIwxcqg74r41CBiuN7xZzhpkgKkpfz3nMEUWzcOEjtoyOf_uqQz6u_x-1wD0X8P1184Wq-aBjpjkFNoLYqMrVThUtxOVpWNdjsPCtwmO3cTDybt3XRm9C2S2tofRIzHfRbDYuULwSytCNwd-ndGXc0rQ4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Urgent Opportunity</span>
+<h3 class="text-2xl font-light mb-2">London Core Office Portfolio</h3>
+<p class="text-on-surface-variant text-sm font-light max-w-md">Off-market acquisition of 4 Grade-A assets in the City of London. Direct divestment from Sovereign Wealth Fund.</p>
+<button class="mt-6 flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">View Memorandum <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-lowest transition-all">
+<span class="material-symbols-outlined text-tertiary mb-4">bolt</span>
+<h4 class="text-lg font-medium mb-1">Tech Series C</h4>
+<p class="text-sm text-on-surface-variant font-light">Secondary shares available in $2B Fintech unicorn. Direct seller.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-lowest transition-all">
+<span class="material-symbols-outlined text-primary mb-4">real_estate_agent</span>
+<h4 class="text-lg font-medium mb-1">Swiss Hospitality</h4>
+<p class="text-sm text-on-surface-variant font-light">Luxury resort redevelopment in Gstaad. Equity partnership 15% IRR.</p>
+</div>
+</div>
+<!-- Quick Actions Panel -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/10">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface mb-8">Partner Actions</h3>
+<div class="space-y-4">
+<button class="w-full flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-high rounded-lg group transition-all">
+<span class="text-sm font-medium">Create New Listing</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-90 transition-transform">add</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-high rounded-lg group transition-all">
+<span class="text-sm font-medium">Message Concierge</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chat_bubble</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-high rounded-lg group transition-all">
+<span class="text-sm font-medium">Download Q3 Report</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-y-1 transition-transform">download</span>
+</button>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-xl text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-lg font-medium mb-2">Market Pulse</h3>
+<p class="text-sm opacity-80 font-light mb-6">Real-time sentiment tracking for private capital flows in the APAC region.</p>
+<div class="flex items-center gap-4">
+<div class="flex-1 h-1 bg-on-primary/20 rounded-full overflow-hidden">
+<div class="w-[72%] h-full bg-on-primary"></div>
+</div>
+<span class="text-xs font-bold">72% Bullish</span>
+</div>
+</div>
+<div class="absolute -right-8 -bottom-8 text-on-primary/10 select-none">
+<span class="material-symbols-outlined text-9xl">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- My Listings Table -->
+<section class="bg-white rounded-xl shadow-sm border border-outline-variant/10 overflow-hidden">
+<div class="px-8 py-6 flex justify-between items-center bg-surface-container-low/30">
+<h2 class="text-lg font-medium">My Listings</h2>
+<div class="flex gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="bg-surface-container-lowest border-none rounded-full pl-10 text-xs py-2 w-64 focus:ring-1 focus:ring-primary/20" placeholder="Search portfolio..." type="text"/>
+</div>
+<button class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2">Filter <span class="material-symbols-outlined text-sm">filter_list</span></button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-low/50">
+<th class="px-8 py-4 font-bold">Asset Name</th>
+<th class="px-8 py-4 font-bold">Type</th>
+<th class="px-8 py-4 font-bold">Valuation</th>
+<th class="px-8 py-4 font-bold">Status</th>
+<th class="px-8 py-4 font-bold">Yield</th>
+<th class="px-8 py-4 font-bold"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="text-sm font-medium">Paris Logistics Hub</span>
+<span class="text-[10px] text-slate-400">ID: AR-9081</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-on-surface-variant font-light">Commercial</td>
+<td class="px-8 py-6 text-sm font-medium">€42.5M</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-green-50 text-green-700 text-[10px] font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                    Active
+                                </span>
+</td>
+<td class="px-8 py-6 text-sm font-light text-green-600">5.8%</td>
+<td class="px-8 py-6 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="text-sm font-medium">Aureus Bio-Tech III</span>
+<span class="text-[10px] text-slate-400">ID: AR-4432</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-on-surface-variant font-light">Private Equity</td>
+<td class="px-8 py-6 text-sm font-medium">$120.0M</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                                    In Review
+                                </span>
+</td>
+<td class="px-8 py-6 text-sm font-light text-on-surface-variant">N/A</td>
+<td class="px-8 py-6 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="text-sm font-medium">Tuscany Vineyard Estate</span>
+<span class="text-[10px] text-slate-400">ID: AR-1219</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-on-surface-variant font-light">Luxury Asset</td>
+<td class="px-8 py-6 text-sm font-medium">€18.2M</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[10px] font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                    Negotiation
+                                </span>
+</td>
+<td class="px-8 py-6 text-sm font-light text-amber-600">4.1%</td>
+<td class="px-8 py-6 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-4 bg-surface-container-low/30 flex justify-center">
+<button class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors">View All Portfolio Assets</button>
+</div>
+</section>
+</main>
+<!-- Concierge HUD -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="bg-white/60 backdrop-blur-xl p-4 rounded-xl shadow-xl shadow-blue-900/10 border border-white flex items-center gap-6">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Female Advisor Portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkDkS6XThxqjf8B8d-1CWCb1_BgD_DNJDOA6xW4En5miSltQxXLg47p8ytJINeuH3FwVmV3LVcJDDl7X3uTKKcby4tK9Od_9LJazo7vo_OL4b20zVOn_poYg9mNuCOjqspgMW2DGxToG_mW8ABW1rT5DQA75FUo1-vpp6qv5Rsp_cs7oNL-ypw1cvyza6go6e7iYwdp8zZODIjS9NB3BSMskWrCt5i-e4by0waOoyHLOGYLF1ypDzPrxqcv_wpOHPZmMZwJk7DTww"/>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary text-xs font-bold border-2 border-white">
+<span class="material-symbols-outlined text-sm">headset_mic</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary">Elena is online</p>
+<p class="text-xs text-on-surface-variant">Ready to assist with your listings.</p>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-xs font-medium hover:bg-primary-dim transition-colors">Connect</button>
+</div>
+</div>
+<!-- Footer -->
+<footer class="lg:ml-64 w-full border-t border-slate-100 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full">
+<p class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400">© 2024 Aureus Capital. Boutique Digital Concierge.</p>
+<div class="flex gap-8 mt-6 md:mt-0">
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+<a class="font-Lexend text-xs font-light tracking-widest uppercase text-slate-400 hover:text-blue-600 transition-colors" href="#">Institutional Disclosure</a>
+</div>
+</div>
+</footer>
+</body></html>
