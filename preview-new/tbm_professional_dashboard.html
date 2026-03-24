@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TBM | User Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#2b3437",
+              "primary": "#465f88",
+              "on-primary-fixed-variant": "#435c85",
+              "on-secondary-fixed-variant": "#555c66",
+              "on-tertiary": "#fff8f1",
+              "tertiary-fixed": "#fbd185",
+              "on-tertiary-container": "#624604",
+              "secondary-fixed-dim": "#ced5e0",
+              "secondary-fixed": "#dce3ee",
+              "tertiary-container": "#fbd185",
+              "on-background": "#2b3437",
+              "primary-fixed-dim": "#c0d5ff",
+              "tertiary": "#785a1a",
+              "on-surface-variant": "#586064",
+              "surface-container-high": "#e3e9ec",
+              "surface-bright": "#f8f9fa",
+              "secondary-dim": "#4d545d",
+              "on-error-container": "#752121",
+              "surface-dim": "#d1dce0",
+              "surface": "#f8f9fa",
+              "error-dim": "#4e0309",
+              "primary-dim": "#3a537b",
+              "secondary-container": "#dce3ee",
+              "on-secondary-fixed": "#394049",
+              "on-primary": "#f6f7ff",
+              "background": "#f8f9fa",
+              "primary-container": "#d6e3ff",
+              "outline-variant": "#abb3b7",
+              "outline": "#737c7f",
+              "on-error": "#fff7f6",
+              "tertiary-dim": "#6b4e0e",
+              "surface-container-low": "#f1f4f6",
+              "tertiary-fixed-dim": "#ecc479",
+              "on-primary-container": "#39527a",
+              "inverse-surface": "#0c0f10",
+              "inverse-on-surface": "#9b9d9e",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "on-tertiary-fixed": "#4a3400",
+              "on-primary-fixed": "#264067",
+              "primary-fixed": "#d6e3ff",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#dbe4e7",
+              "error": "#9f403d",
+              "surface-container": "#eaeff1",
+              "secondary": "#596069",
+              "inverse-primary": "#aec7f6",
+              "error-container": "#fe8983",
+              "surface-tint": "#465f88",
+              "surface-container-highest": "#dbe4e7",
+              "on-secondary": "#f7f9ff",
+              "on-secondary-container": "#4b525c"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Lexend', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(248, 249, 250, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- SideNavBar Integration -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-slate-200/50 dark:border-slate-800/50 bg-slate-50 dark:bg-slate-950 flex flex-col p-6 space-y-8 z-50">
+<div class="flex flex-col">
+<span class="text-lg font-bold text-blue-900 dark:text-blue-100">Aureus Capital</span>
+<span class="font-['Lexend'] text-sm font-light text-blue-900 dark:text-blue-200">Premium Concierge</span>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary py-3 rounded-xl font-medium shadow-sm transition-transform active:scale-95">
+            New Request
+        </button>
+<nav class="flex-1 space-y-2">
+<!-- Active State: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-900 text-blue-900 dark:text-blue-200 shadow-sm rounded-lg font-medium transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Lexend'] text-sm font-light">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="font-['Lexend'] text-sm font-light">Investments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+<span class="font-['Lexend'] text-sm font-light">Opportunities</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Lexend'] text-sm font-light">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Lexend'] text-sm font-light">Settings</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-['Lexend'] text-sm font-light">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-['Lexend'] text-sm font-light">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen p-10 pb-24">
+<!-- Header Section -->
+<header class="mb-12 flex justify-between items-end">
+<div>
+<h1 class="text-4xl font-light tracking-tight text-on-surface mb-2">Welcome back, <span class="font-semibold">Alexander</span></h1>
+<p class="text-on-surface-variant font-light text-lg">Your portfolio overview for today, Oct 24.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary cursor-pointer hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<img class="w-12 h-12 rounded-full border-2 border-surface-container-high object-cover shadow-sm" data-alt="Professional user profile headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs29JUkmEhIIHfRYTjDMiZco7-xb-_L1aOx2wM8_dqCqlmHU8qAVprWuotNoaGJ4DhxdingKKvghXQU31QbN12NlOSeXKjgjFCLXpm_qDnwNvM6nElvrTJ6AODPTs1CHzknKBcNBWDsLinmkrRjzF334ZN-ebFvZ1j2MqjiZaqNFgzwZ09vKFS7npj3zKIAUm516FQ0KG79IaBVloIBQK1rhFntl8Xn8UMnIo_m_R_ZAGEwcy6X6lfAPZ1cbWgKN6bDYQl4Dfx0dw"/>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Quick Actions Bento (Asymmetric Left) -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-8 rounded-xl shadow-sm border-0 flex flex-col justify-between h-full min-h-[320px]">
+<div>
+<h2 class="text-xl font-semibold mb-2">Portfolio Management</h2>
+<p class="text-on-surface-variant font-light text-sm mb-8 leading-relaxed">Instantly manage your existing business listings or start a new acquisition request.</p>
+</div>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between px-6 py-4 bg-surface-container-lowest hover:bg-surface-bright transition-all rounded-xl text-primary font-medium group">
+<span>Create New Listing</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">add_circle</span>
+</button>
+<button class="w-full flex items-center justify-between px-6 py-4 bg-surface-container-lowest hover:bg-surface-bright transition-all rounded-xl text-primary font-medium group">
+<span>View All Messages</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Stats Bento Grid (Center/Right) -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-2 gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-b-4 border-primary">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary-dim text-3xl" data-weight="fill">list_alt</span>
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Listings</span>
+</div>
+<div>
+<div class="text-4xl font-bold text-on-surface">12</div>
+<div class="text-sm text-on-surface-variant font-light mt-1">+2 this month</div>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-weight="fill">visibility</span>
+<span class="text-xs font-bold text-tertiary tracking-widest uppercase">Views</span>
+</div>
+<div>
+<div class="text-4xl font-bold text-on-surface">1,402</div>
+<div class="text-sm text-green-600 font-light mt-1">↑ 14% growth</div>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">forum</span>
+<span class="text-xs font-bold text-secondary tracking-widest uppercase">Messages</span>
+</div>
+<div>
+<div class="text-4xl font-bold text-on-surface">28</div>
+<div class="text-sm text-on-surface-variant font-light mt-1">4 unread priority</div>
+</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl" data-weight="fill">hub</span>
+<span class="text-xs font-bold text-primary-fixed-dim tracking-widest uppercase">Connections</span>
+</div>
+<div>
+<div class="text-4xl font-bold text-on-surface">5</div>
+<div class="text-sm text-on-surface-variant font-light mt-1">Active NDAs</div>
+</div>
+</div>
+</div>
+<!-- Detailed Table Section (Full Width Bento) -->
+<div class="col-span-12">
+<div class="bg-surface-container-low rounded-xl p-8 shadow-sm">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+<h3 class="text-2xl font-light">My <span class="font-semibold">Listings</span></h3>
+<div class="flex gap-2">
+<div class="bg-surface-container-lowest px-4 py-2 rounded-xl border border-outline-variant/10 text-sm font-light flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">filter_list</span> Filter
+                            </div>
+<div class="bg-surface-container-lowest px-4 py-2 rounded-xl border border-outline-variant/10 text-sm font-light flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">sort</span> Sort By
+                            </div>
+</div>
+</div>
+<div class="overflow-hidden bg-surface-container-lowest rounded-xl">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high">
+<th class="px-6 py-5 font-medium text-on-surface-variant text-sm uppercase tracking-widest">Title</th>
+<th class="px-6 py-5 font-medium text-on-surface-variant text-sm uppercase tracking-widest">Type</th>
+<th class="px-6 py-5 font-medium text-on-surface-variant text-sm uppercase tracking-widest">Status</th>
+<th class="px-6 py-5 font-medium text-on-surface-variant text-sm uppercase tracking-widest">Views</th>
+<th class="px-6 py-5 font-medium text-on-surface-variant text-sm uppercase tracking-widest text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/50">
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-6 py-6">
+<div class="font-semibold text-primary">Luxury Eco-Resort - Phuket</div>
+<div class="text-xs text-on-surface-variant font-light mt-0.5">Ref: BK-4092</div>
+</td>
+<td class="px-6 py-6 text-sm font-light">Hospitality</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">Active</span>
+</td>
+<td class="px-6 py-6 text-sm">482</td>
+<td class="px-6 py-6 text-right">
+<button class="text-primary-dim opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-6 py-6">
+<div class="font-semibold text-primary">Tech Logistics Hub - EEC</div>
+<div class="text-xs text-on-surface-variant font-light mt-0.5">Ref: LG-1120</div>
+</td>
+<td class="px-6 py-6 text-sm font-light">Infrastructure</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-700">Under Review</span>
+</td>
+<td class="px-6 py-6 text-sm">128</td>
+<td class="px-6 py-6 text-right">
+<button class="text-primary-dim opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-6 py-6">
+<div class="font-semibold text-primary">Organic Coffee Chain - Bangkok</div>
+<div class="text-xs text-on-surface-variant font-light mt-0.5">Ref: FB-8821</div>
+</td>
+<td class="px-6 py-6 text-sm font-light">F&amp;B</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-surface-container-highest text-secondary-dim">Closed</span>
+</td>
+<td class="px-6 py-6 text-sm">891</td>
+<td class="px-6 py-6 text-right">
+<button class="text-primary-dim opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Concierge HUD Bespoke Component -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="bg-glass rounded-2xl shadow-xl border border-white/20 p-4 flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Concierge Online</span>
+<span class="text-xs font-light text-on-surface">Awaiting your instruction.</span>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">keyboard_arrow_up</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Integration -->
+<footer class="ml-64 w-[calc(100%-16rem)] py-12 px-8 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-2xl mx-auto border-t border-slate-200 dark:border-slate-800 pt-8">
+<div class="flex flex-col items-start gap-2">
+<span class="text-sm font-bold opacity-50 font-['Lexend'] uppercase tracking-widest text-blue-900 dark:text-blue-100">TBM</span>
+<p class="font-['Lexend'] text-xs font-light uppercase tracking-widest text-slate-400 dark:text-slate-600">© 2024 TBM Thailand Business Matching. All rights reserved.</p>
+</div>
+<div class="flex gap-8 mt-6 md:mt-0">
+<a class="font-['Lexend'] text-xs font-light uppercase tracking-widest text-slate-400 hover:text-blue-900 transition-all underline decoration-blue-900/30" href="#">Privacy Policy</a>
+<a class="font-['Lexend'] text-xs font-light uppercase tracking-widest text-slate-400 hover:text-blue-900 transition-all underline decoration-blue-900/30" href="#">Terms of Service</a>
+<a class="font-['Lexend'] text-xs font-light uppercase tracking-widest text-slate-400 hover:text-blue-900 transition-all underline decoration-blue-900/30" href="#">Investment Disclosure</a>
+</div>
+</div>
+</footer>
+</body></html>

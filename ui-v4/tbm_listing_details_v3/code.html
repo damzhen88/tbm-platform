@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Listing Detail | TBM Thailand</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#9b9d9e",
+              "on-primary-fixed-variant": "#435c85",
+              "error": "#9f403d",
+              "on-tertiary": "#fff8f1",
+              "background": "#f8f9fa",
+              "surface-tint": "#465f88",
+              "secondary-dim": "#4d545d",
+              "surface-bright": "#f8f9fa",
+              "tertiary": "#785a1a",
+              "on-tertiary-container": "#624604",
+              "error-container": "#fe8983",
+              "secondary": "#596069",
+              "error-dim": "#4e0309",
+              "primary-container": "#d6e3ff",
+              "on-error-container": "#752121",
+              "tertiary-fixed-dim": "#ecc479",
+              "on-primary": "#f6f7ff",
+              "secondary-fixed": "#dce3ee",
+              "secondary-container": "#dce3ee",
+              "tertiary-dim": "#6b4e0e",
+              "on-secondary-fixed": "#394049",
+              "on-tertiary-fixed": "#4a3400",
+              "secondary-fixed-dim": "#ced5e0",
+              "outline": "#737c7f",
+              "primary-fixed-dim": "#c0d5ff",
+              "surface-container-high": "#e3e9ec",
+              "primary-dim": "#3a537b",
+              "surface-variant": "#dbe4e7",
+              "on-error": "#fff7f6",
+              "on-secondary": "#f7f9ff",
+              "on-primary-container": "#39527a",
+              "tertiary-container": "#fbd185",
+              "outline-variant": "#abb3b7",
+              "on-secondary-container": "#4b525c",
+              "surface-dim": "#d1dce0",
+              "primary": "#465f88",
+              "surface-container-low": "#f1f4f6",
+              "on-primary-fixed": "#264067",
+              "inverse-surface": "#0c0f10",
+              "on-background": "#2b3437",
+              "inverse-primary": "#aec7f6",
+              "primary-fixed": "#d6e3ff",
+              "on-tertiary-fixed-variant": "#6c500f",
+              "surface-container": "#eaeff1",
+              "surface": "#f8f9fa",
+              "on-secondary-fixed-variant": "#555c66",
+              "surface-container-highest": "#dbe4e7",
+              "tertiary-fixed": "#fbd185",
+              "on-surface": "#2b3437",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#586064"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Lexend', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="bg-white/70 backdrop-blur-xl docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-blue-950">TBM Thailand</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-blue-900 border-b-2 border-blue-900 pb-1 font-semibold text-xs uppercase tracking-widest" href="#">Marketplace</a>
+<a class="text-slate-500 hover:text-blue-800 transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Valuation</a>
+<a class="text-slate-500 hover:text-blue-800 transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Deal Flow</a>
+<a class="text-slate-500 hover:text-blue-800 transition-colors text-xs uppercase tracking-widest font-semibold" href="#">Portfolio</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-blue-900 font-semibold text-xs uppercase tracking-widest px-4 py-2 hover:bg-blue-50/50 rounded-xl transition-all">Login</button>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-6 py-2.5 rounded-xl text-xs uppercase tracking-widest font-bold shadow-sm active:scale-95 transition-transform">Get Verified</button>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 py-12 flex flex-col md:flex-row gap-12">
+<!-- Left Content Area -->
+<div class="flex-1 space-y-16">
+<!-- Header Section -->
+<section class="space-y-6">
+<div class="flex items-start justify-between">
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded">Series A</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Verified Listing</span>
+</div>
+</div>
+<h1 class="text-4xl md:text-5xl font-medium tracking-tight text-on-surface">EcoStream Logistics Infrastructure</h1>
+<p class="text-lg font-light text-on-surface-variant max-w-2xl leading-relaxed">Scaling sustainable last-mile delivery networks across Southeast Asia through proprietary EV integration and smart-hub architecture.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Industry</p>
+<p class="text-on-surface font-medium">Green Logistics</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Location</p>
+<p class="text-on-surface font-medium">Bangkok, TH</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Revenue (ARR)</p>
+<p class="text-on-surface font-medium">$4.2M USD</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">EBITDA</p>
+<p class="text-on-surface font-medium">18.4%</p>
+</div>
+</div>
+</section>
+<!-- Financials Section (Bento Grid) -->
+<section class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-normal tracking-tight">Investment Summary</h2>
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Amount Raised -->
+<div class="md:col-span-2 bg-primary-container/30 p-10 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container mb-4">Capital Requirement</p>
+<h3 class="text-5xl font-medium text-on-primary-container">$12,500,000</h3>
+<p class="mt-4 text-on-primary-container/70 max-w-md font-light">Seeking strategic growth capital to expand operational capacity in three new regional provinces by Q4 2024.</p>
+</div>
+<span class="absolute -right-8 -bottom-8 material-symbols-outlined text-[180px] text-primary/5" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<!-- Valuation -->
+<div class="bg-surface-container-highest p-8 rounded-xl flex flex-col justify-between">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Pre-Money Valuation</p>
+<h3 class="text-3xl font-medium">$48.0M</h3>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/20">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Equity Offered</p>
+<h3 class="text-2xl font-medium">20.6%</h3>
+</div>
+</div>
+<!-- Use of Funds -->
+<div class="md:col-span-3 bg-surface-container-low p-8 rounded-xl">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-6">Use of Funds Allocation</p>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-3">
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">Infrastructure</span>
+<span class="text-sm font-bold text-primary">45%</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[25%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">Tech Stack</span>
+<span class="text-sm font-bold text-primary">25%</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[20%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">Market Ops</span>
+<span class="text-sm font-bold text-primary">20%</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="w-full bg-outline-variant/20 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[10%]"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">Working Capital</span>
+<span class="text-sm font-bold text-primary">10%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-normal tracking-tight">Executive Leadership</h2>
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex items-center gap-6 group">
+<img alt="CEO Portrait" class="w-24 h-24 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Professional portrait of a male executive in a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZmfLj7Q3piz1rJNr7rv6IJGj1umVqRBz3cDefhkmlKSdhJVJQZO-Ucn7GdGivYmd7AKnCcm57Dz9ib9790_gYK55io1Ak47KYgM8B6Q9WA7X6cwWjnsbu8cpaQ3wtKT11QjjEPiHb89SKVs9L2XDim5sXaqm5WCcS7jmFGF2Mz7-L_5HWn0zZPXAazGUCf2BR5i2-Tt9E-ltSxBnfKJM47wcRSoZ3J6-fVcjILgtvEO80jMUGLQAmjQp0i-vsGJ_ft-GldxVM7CA"/>
+<div>
+<h4 class="text-lg font-semibold text-on-surface">Somchai Pra-ert</h4>
+<p class="text-sm font-medium text-primary uppercase tracking-wider mb-2">Founder &amp; CEO</p>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Former Logistics Director at regional unicorn with 15+ years in supply chain optimization.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<img alt="CFO Portrait" class="w-24 h-24 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Professional portrait of a female executive in business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW-UvhSHXa7e-6VmiTG2T5J9Z5CFlxLfVoSJyUlkPCwM4PCtmEJMHEz-2oOsXtM9dASAFXd4E8nZGSMIcUBHNwTIfaStd4mOs1v5gQw01mFL3df7qtkUU4OBBMUHNOzCaaln7XrdwHcc8ZyEU7T2zVPpxZ0PTBjpoe4G7-5z-IhxsPNbV8OLsKlYLupPykk2EqZeLkLBBgi_o1Uje8kDKLN9udSewRM8MMGmFtR3b6u1bldXwJqT_lfrKhXRn0AHP1qlxEmRVZrVc"/>
+<div>
+<h4 class="text-lg font-semibold text-on-surface">Dr. Ananya Srisai</h4>
+<p class="text-sm font-medium text-primary uppercase tracking-wider mb-2">Chief Financial Officer</p>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">PhD in Economics from LSE. Ex-Goldman Sachs M&amp;A Lead for Southeast Asia.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Documents Section -->
+<section class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-normal tracking-tight">Due Diligence Vault</h2>
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/10 rounded-xl divide-y divide-outline-variant/10">
+<div class="p-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-dim">description</span>
+<div>
+<p class="font-medium text-on-surface">Executive Summary 2024</p>
+<p class="text-xs text-on-surface-variant">PDF • 4.2 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">download</span>
+</div>
+<div class="p-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-dim">table_chart</span>
+<div>
+<p class="font-medium text-on-surface">Financial Projections (5-Year Model)</p>
+<p class="text-xs text-on-surface-variant">XLSX • 1.8 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">download</span>
+</div>
+<div class="p-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-dim">verified_user</span>
+<div>
+<p class="font-medium text-on-surface">Audited Financial Statements FY23</p>
+<p class="text-xs text-on-surface-variant">PDF • 12.5 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">download</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar Section -->
+<aside class="w-full md:w-96 space-y-8">
+<!-- Profile Card -->
+<div class="sticky top-28 bg-white shadow-[0_40px_60px_-15px_rgba(43,52,55,0.06)] rounded-xl overflow-hidden border border-outline-variant/5">
+<div class="p-8 space-y-8">
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="relative">
+<img alt="Advisor Portrait" class="w-20 h-20 rounded-full object-cover" data-alt="Portrait of a male investment advisor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTXifi_Yrb2YLTSgviEWdUM_kIlxtkGF4i9aLdD_Jc4efyhxWPPhI-QS5V4HFa4awcDFh_ahtaxCiQpELyElS6wCZFXCZfSP5-GE8RKKDA0QHX7gjFOXACjzvK6SkhZIB3L2-p6CwcVZ2OAeeM41-BiDfPOMq7fCTTnkvjlGW6fez9NVIaa2dts2k5mzZ3qspZTwk5LPb496oJZSLhejcjgmOBhNEwPjTfgRy4_MYy2nxZX08xh7w9_SOcvtD9qRtccap8AGsBaUE"/>
+<div class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 border-4 border-white rounded-full"></div>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-on-surface">Kasem Bunnag</h3>
+<p class="text-xs font-bold text-primary uppercase tracking-widest">Listing Director</p>
+</div>
+</div>
+<div class="space-y-4 pt-4 border-t border-outline-variant/10">
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-on-surface-variant">Response Time</span>
+<span class="text-xs font-bold text-on-surface">&lt; 2 Hours</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-on-surface-variant">Deals Closed</span>
+<span class="text-xs font-bold text-on-surface">14</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-on-surface-variant">Member Since</span>
+<span class="text-xs font-bold text-on-surface">Jan 2021</span>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest shadow-md active:scale-95 transition-all">
+                            Connect with Principal
+                        </button>
+<button class="w-full bg-surface-container-low text-on-surface py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-surface-container-high transition-all">
+                            Request Data Room Access
+                        </button>
+</div>
+<div class="pt-4 flex items-center justify-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">report</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Insights Card -->
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Market Intelligence</h4>
+<div class="space-y-4">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-xl">trending_up</span>
+<p class="text-sm font-light leading-relaxed">Regional logistics demand projected to grow by 22% CAGR through 2027.</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-xl">shield_moon</span>
+<p class="text-sm font-light leading-relaxed">Tax incentives available under BOI Category 7.1.1 (Green Infrastructure).</p>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer Space -->
+<footer class="max-w-screen-2xl mx-auto px-8 py-16 border-t border-outline-variant/10 mt-12">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-4">
+<div class="text-xl font-bold tracking-tighter text-blue-950 uppercase">TBM Thailand</div>
+<p class="text-sm text-on-surface-variant font-light max-w-xs leading-relaxed">The premier marketplace for institutional deal flow and verified enterprise valuations in the SE Asian region.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div class="space-y-4">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Platform</p>
+<ul class="space-y-2 text-sm font-light text-on-surface">
+<li><a class="hover:text-primary transition-colors" href="#">Marketplace</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Valuations</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Success Stories</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Company</p>
+<ul class="space-y-2 text-sm font-light text-on-surface">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Member Support</p>
+<ul class="space-y-2 text-sm font-light text-on-surface">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Investment FAQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-12 mt-12 border-t border-outline-variant/5 text-center">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-50">© 2024 TBM Thailand. All Rights Reserved. Aureus Capital verified member.</p>
+</div>
+</footer>
+<!-- Concierge HUD -->
+<div class="fixed bottom-6 right-6 z-50">
+<button class="bg-white/80 backdrop-blur-xl border border-outline-variant/10 shadow-xl rounded-full px-6 py-3 flex items-center gap-3 hover:scale-105 active:scale-95 transition-all">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Advisor Online</span>
+<span class="material-symbols-outlined text-lg text-primary">forum</span>
+</button>
+</div>
+</body></html>
