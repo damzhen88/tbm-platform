@@ -149,7 +149,7 @@ export default function DashboardPage() {
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Focus Sectors</h3>
                 <div className="space-y-3">
                   <label className="flex items-center gap-3 cursor-pointer group">
-                    <input checked="" className="w-4 h-4 rounded text-primary focus:ring-primary/30 bg-surface-container-lowest border-outline-variant/30" type="checkbox"/>
+                    <input defaultChecked className="w-4 h-4 rounded text-primary focus:ring-primary/30 bg-surface-container-lowest border-outline-variant/30" type="checkbox"/>
                     <span className="text-sm font-light text-on-surface group-hover:text-primary transition-colors">Tech & AI Solutions</span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer group">

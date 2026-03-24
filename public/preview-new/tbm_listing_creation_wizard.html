@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#465f88",
+                        "on-secondary-fixed": "#394049",
+                        "outline-variant": "#abb3b7",
+                        "secondary-fixed": "#dce3ee",
+                        "on-primary-fixed": "#264067",
+                        "error-dim": "#4e0309",
+                        "secondary": "#596069",
+                        "on-tertiary-fixed": "#4a3400",
+                        "surface-container-low": "#f1f4f6",
+                        "outline": "#737c7f",
+                        "tertiary-fixed-dim": "#ecc479",
+                        "on-secondary-container": "#4b525c",
+                        "inverse-surface": "#0c0f10",
+                        "background": "#f8f9fa",
+                        "secondary-container": "#dce3ee",
+                        "surface-bright": "#f8f9fa",
+                        "surface": "#f8f9fa",
+                        "on-error": "#fff7f6",
+                        "on-secondary-fixed-variant": "#555c66",
+                        "primary-dim": "#3a537b",
+                        "tertiary": "#785a1a",
+                        "on-tertiary-fixed-variant": "#6c500f",
+                        "surface-container-highest": "#dbe4e7",
+                        "on-surface-variant": "#586064",
+                        "surface-dim": "#d1dce0",
+                        "on-tertiary": "#fff8f1",
+                        "on-background": "#2b3437",
+                        "on-tertiary-container": "#624604",
+                        "tertiary-dim": "#6b4e0e",
+                        "surface-container-high": "#e3e9ec",
+                        "on-primary-fixed-variant": "#435c85",
+                        "on-surface": "#2b3437",
+                        "on-primary-container": "#39527a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#465f88",
+                        "inverse-on-surface": "#9b9d9e",
+                        "inverse-primary": "#aec7f6",
+                        "primary-container": "#d6e3ff",
+                        "tertiary-container": "#fbd185",
+                        "error-container": "#fe8983",
+                        "tertiary-fixed": "#fbd185",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container": "#eaeff1",
+                        "secondary-fixed-dim": "#ced5e0",
+                        "on-error-container": "#752121",
+                        "secondary-dim": "#4d545d",
+                        "surface-variant": "#dbe4e7",
+                        "primary-fixed-dim": "#c0d5ff",
+                        "on-secondary": "#f7f9ff",
+                        "error": "#9f403d",
+                        "on-primary": "#f6f7ff"
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full mx-auto">
+<div class="text-xl font-semibold tracking-tighter text-blue-950">TBM Thailand</div>
+<nav class="hidden md:flex space-x-8 font-light tracking-tight">
+<a class="text-slate-600 hover:text-blue-800 transition-colors" href="#">Marketplace</a>
+<a class="text-slate-600 hover:text-blue-800 transition-colors" href="#">Services</a>
+<a class="text-slate-600 hover:text-blue-800 transition-colors" href="#">About</a>
+<a class="text-slate-600 hover:text-blue-800 transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 hover:text-blue-800 font-medium px-4 py-2 rounded-xl transition-all">I Want to Invest</button>
+<button class="bg-primary text-on-primary font-medium px-6 py-2 rounded-xl shadow-sm hover:opacity-90 active:scale-[0.99] transition-all">I Want to Sell</button>
+</div>
+</div>
+<div class="bg-slate-100/50 h-[1px]"></div>
+</header>
+<main class="flex-grow pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto w-full">
+<!-- Progress Header -->
+<div class="mb-12">
+<div class="flex justify-between items-end mb-4">
+<div>
+<span class="text-primary text-xs font-bold uppercase tracking-widest block mb-2">Step 2 of 4</span>
+<h1 class="text-3xl font-medium text-on-surface">Financial Summary</h1>
+</div>
+<div class="text-right hidden md:block">
+<p class="text-sm text-on-surface-variant italic">"Transparency builds premium valuations."</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/2 rounded-full transition-all duration-500"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] uppercase tracking-widest text-outline">
+<span class="text-primary font-bold">1. Basic Info</span>
+<span class="text-primary font-bold">2. Financials</span>
+<span>3. Operations</span>
+<span>4. Verification</span>
+</div>
+</div>
+<!-- Bento Grid Form Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Left Column: Primary Inputs -->
+<div class="md:col-span-8 space-y-8">
+<!-- Revenue & EBITDA Card -->
+<div class="bg-surface-container-low rounded-full p-8 transition-all">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'opsz' 40;">account_balance</span>
+<h2 class="text-xl font-medium">Core Performance</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Annual Revenue (THB)</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/15 rounded-xl py-4 px-5 focus:ring-0 focus:border-primary/40 transition-all text-lg font-medium" placeholder="e.g. 25,000,000" type="text"/>
+<span class="absolute right-5 top-1/2 -translate-y-1/2 text-outline text-sm">per year</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">EBITDA (THB)</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/15 rounded-xl py-4 px-5 focus:ring-0 focus:border-primary/40 transition-all text-lg font-medium" placeholder="e.g. 4,500,000" type="text"/>
+<span class="absolute right-5 top-1/2 -translate-y-1/2 text-outline text-sm">adjusted</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Growth and P&L Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Growth Rate -->
+<div class="bg-surface-container-low rounded-full p-8">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-6">Year-over-Year Growth</h3>
+<div class="flex items-center gap-4">
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<span class="text-2xl font-bold text-primary">12%</span>
+</div>
+<p class="mt-4 text-xs text-outline leading-relaxed">Based on the last 3 fiscal years of audited statements.</p>
+</div>
+<!-- Margin Analysis -->
+<div class="bg-surface-container-low rounded-full p-8">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-6">Profit Margin</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20">High Margin (&gt;20%)</span>
+<span class="px-4 py-2 bg-surface-container-highest text-outline rounded-full text-xs font-medium">Stable</span>
+<span class="px-4 py-2 bg-surface-container-highest text-outline rounded-full text-xs font-medium">Asset-Light</span>
+</div>
+</div>
+</div>
+<!-- Document Preview Placeholder -->
+<div class="bg-surface-container-low rounded-full p-8">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Financial Proof (Optional)</h3>
+<span class="text-[10px] text-primary underline cursor-pointer">View Data Requirements</span>
+</div>
+<div class="border-2 border-dashed border-outline-variant/30 rounded-full py-12 flex flex-col items-center justify-center text-outline hover:bg-surface-container-highest transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-4xl mb-3 group-hover:scale-110 transition-transform">cloud_upload</span>
+<p class="text-sm">Drag P&amp;L Statements or Tax Returns here</p>
+<p class="text-[10px] mt-1 opacity-60">PDF, XLSX up to 25MB</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Contextual Info & Guidance -->
+<div class="md:col-span-4 space-y-8">
+<!-- Concierge Advice Card -->
+<div class="glass-panel rounded-full p-8 border border-white/20 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<h3 class="text-primary text-xs font-bold uppercase tracking-widest mb-4">Concierge Tip</h3>
+<p class="text-on-surface text-sm leading-relaxed mb-6">
+                        Investors in the Thai market prioritize <strong>EBITDA stability</strong>. Ensure your adjusted figures account for non-recurring owner expenses to reflect the true earning potential.
+                    </p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                        Talk to an Advisor <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Valuation Estimator Widget -->
+<div class="bg-primary text-on-primary rounded-full p-8 shadow-xl shadow-primary/20">
+<h3 class="text-[10px] uppercase tracking-widest opacity-80 mb-6">Live Valuation Range</h3>
+<div class="space-y-1 mb-8">
+<p class="text-3xl font-bold tracking-tighter">฿32.5M - ฿40.0M</p>
+<p class="text-[10px] opacity-70">Estimated based on sector multiples (7.2x - 8.9x)</p>
+</div>
+<div class="flex items-center gap-2 text-xs bg-white/10 p-3 rounded-xl border border-white/5">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>Sector performance is up 4% this quarter</span>
+</div>
+</div>
+<!-- Trusted Badge -->
+<div class="bg-surface-container-highest/40 rounded-full p-6 text-center">
+<div class="flex justify-center gap-4 opacity-40 grayscale">
+<span class="material-symbols-outlined">security</span>
+<span class="material-symbols-outlined">verified_user</span>
+<span class="material-symbols-outlined">encrypted</span>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-outline mt-4">Bank-Grade Encryption</p>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Actions -->
+<div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-outline-variant/10">
+<button class="flex items-center gap-2 text-slate-500 hover:text-on-surface transition-all text-sm font-medium">
+<span class="material-symbols-outlined">arrow_back</span>
+                Back to Basic Info
+            </button>
+<div class="flex gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-8 py-4 bg-surface-container-high text-on-surface rounded-full text-sm font-bold uppercase tracking-widest hover:bg-surface-container-highest transition-all">
+                    Save Draft
+                </button>
+<button class="flex-1 md:flex-none px-12 py-4 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                    Continue
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-slate-100 dark:border-slate-900 bg-white dark:bg-slate-950 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full gap-6 opacity-80">
+<p class="text-slate-400 font-lexend text-[10px] uppercase tracking-widest max-w-md text-center md:text-left">
+                © 2024 Thailand Business Matching (TBM). All rights reserved. Registered Private Equity Brokerage.
+            </p>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-400 hover:text-blue-900 transition-colors font-lexend text-[10px] uppercase tracking-widest" href="#">Regulatory Disclosure</a>
+<a class="text-slate-400 hover:text-blue-900 transition-colors font-lexend text-[10px] uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-blue-900 transition-colors font-lexend text-[10px] uppercase tracking-widest" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-blue-900 transition-colors font-lexend text-[10px] uppercase tracking-widest" href="#">Investor Protection</a>
+</div>
+</div>
+</footer>
+<!-- Concierge HUD -->
+<div class="fixed bottom-6 right-6 z-50">
+<button class="glass-panel p-4 rounded-full shadow-2xl border border-white/50 flex items-center gap-3 hover:bg-white transition-all group">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-weight="fill">support_agent</span>
+</div>
+<div class="text-left pr-4">
+<span class="block text-[10px] uppercase tracking-tighter text-outline font-bold">Listing Assistant</span>
+<span class="block text-xs font-semibold text-primary">Chat with Advisor</span>
+</div>
+</button>
+</div>
+</body></html>
