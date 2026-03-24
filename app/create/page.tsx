@@ -5,168 +5,229 @@ import Link from "next/link";
 
 export default function CreateListingPage() {
   const [step, setStep] = useState(1);
-  const totalSteps = 4;
+  const [formData, setFormData] = useState({
+    entityName: "",
+    industry: "",
+    description: "",
+    targetAmount: "",
+    equity: "",
+    location: "",
+    revenue: "",
+    ebitda: "",
+  });
 
-  const handleSubmit = () => {
-    alert("Listing created successfully!");
-    window.location.href = "/dashboard";
+  const industries = [
+    "Precision Manufacturing",
+    "SaaS & Digital Infrastructure",
+    "Biotech & Life Sciences",
+    "Logistics & Distribution",
+    "Hospitality & Tourism",
+    "FinTech",
+    "Energy & Sustainability",
+    "Healthcare",
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <nav className="bg-white/70 backdrop-blur-xl docked full-width top-0 sticky z-50">
-        <div className="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-          <div className="text-xl font-bold tracking-tighter text-blue-950">TBM Thailand</div>
-          <div className="flex items-center gap-4">
-            <Link href="/auth" className="text-blue-900 font-semibold text-xs uppercase tracking-widest">Login</Link>
+    <div className="min-h-screen bg-background text-on-surface font-body">
+      {/* Top Navigation Bar */}
+      <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+        <div className="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+          <div className="text-xl font-medium tracking-widest text-blue-950 uppercase">Aureus Capital</div>
+          <div className="hidden md:flex gap-12 items-center font-['Lexend'] font-light tracking-tight">
+            <Link href="/marketplace" className="text-slate-500 hover:text-blue-900 transition-all duration-300">Marketplace</Link>
+            <Link href="#" className="text-slate-500 hover:text-blue-900 transition-all duration-300">Insights</Link>
+            <Link href="#" className="text-slate-500 hover:text-blue-900 transition-all duration-300">Concierge</Link>
+          </div>
+          <div className="flex items-center gap-6">
+            <Link href="/auth" className="text-slate-500 hover:text-blue-900 text-sm font-label uppercase tracking-widest">Login</Link>
+            <Link href="/auth" className="bg-primary hover:bg-primary-dim text-on-primary px-8 py-2 rounded-md font-label uppercase tracking-widest transition-all duration-300 shadow-sm">Inquire</Link>
           </div>
         </div>
       </nav>
 
-      <main className="max-w-4xl mx-auto px-8 py-12">
-        {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-4xl font-light tracking-tight text-on-surface mb-4">Create New Listing</h1>
-          <p className="text-lg text-on-surface-variant">List your business on Thailand's premier matching platform</p>
+      <main className="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto flex flex-col lg:flex-row gap-16">
+        {/* Wizard Left Content */}
+        <div className="flex-1 max-w-3xl">
+          {/* Stepper Indicator */}
+          <div className="mb-16 flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              <span className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${step >= 1 ? 'bg-primary text-on-primary' : 'bg-surface-container-high text-on-surface'}`}>1</span>
+              <span className={`text-xs font-label uppercase tracking-widest ${step >= 1 ? 'text-primary' : 'opacity-40'}`}>Basic Info</span>
+            </div>
+            <div className="w-12 h-[1px] bg-outline-variant/30"></div>
+            <div className="flex items-center gap-3 opacity-40">
+              <span className="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-xs font-bold">2</span>
+              <span className="text-xs font-label uppercase tracking-widest">Financials</span>
+            </div>
+            <div className="w-12 h-[1px] bg-outline-variant/30"></div>
+            <div className="flex items-center gap-3 opacity-40">
+              <span className="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-xs font-bold">3</span>
+              <span className="text-xs font-label uppercase tracking-widest">Operations</span>
+            </div>
+            <div className="w-12 h-[1px] bg-outline-variant/30"></div>
+            <div className="flex items-center gap-3 opacity-40">
+              <span className="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center text-xs font-bold">4</span>
+              <span className="text-xs font-label uppercase tracking-widest">Verification</span>
+            </div>
+          </div>
+
+          <header className="mb-12">
+            <h1 className="text-3xl md:text-4xl font-light tracking-tight text-primary-dim mb-4">Initialize Listing</h1>
+            <p className="text-on-surface-variant font-light leading-relaxed max-w-xl">
+              Please provide the core identifiers for your asset. This information will form the bedrock of your confidential teaser.
+            </p>
+          </header>
+
+          {/* Form Content */}
+          <section className="space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Entity Name</label>
+                <input 
+                  name="entityName"
+                  value={formData.entityName}
+                  onChange={handleInputChange}
+                  className="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface placeholder:text-outline-variant/50 transition-all outline-none" 
+                  placeholder="Legal name of business" 
+                  type="text"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Industry Sector</label>
+                <select 
+                  name="industry"
+                  value={formData.industry}
+                  onChange={handleInputChange}
+                  className="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface transition-all outline-none"
+                >
+                  <option value="">Select Industry</option>
+                  {industries.map((ind) => (
+                    <option key={ind} value={ind}>{ind}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Brief Description</label>
+              <textarea 
+                name="description"
+                value={formData.description}
+                onChange={handleInputChange}
+                rows={4}
+                className="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface placeholder:text-outline-variant/50 transition-all outline-none resize-none" 
+                placeholder="Describe your business in a few sentences..."
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Target Capital (THB)</label>
+                <input 
+                  name="targetAmount"
+                  value={formData.targetAmount}
+                  onChange={handleInputChange}
+                  className="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface placeholder:text-outline-variant/50 transition-all outline-none" 
+                  placeholder="e.g., 50000000" 
+                  type="number"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Equity Offered (%)</label>
+                <input 
+                  name="equity"
+                  value={formData.equity}
+                  onChange={handleInputChange}
+                  className="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface placeholder:text-outline-variant/50 transition-all outline-none" 
+                  placeholder="e.g., 15" 
+                  type="number"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Primary Location</label>
+                <select 
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  className="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface transition-all outline-none"
+                >
+                  <option value="">Select Location</option>
+                  <option value="Bangkok">Bangkok</option>
+                  <option value="Chonburi">Chonburi</option>
+                  <option value="Phuket">Phuket</option>
+                  <option value="Rayong">Rayong</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] uppercase tracking-[0.2em] font-medium text-outline">Annual Revenue (USD)</label>
+                <input 
+                  name="revenue"
+                  value={formData.revenue}
+                  onChange={handleInputChange}
+                  className="bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary/40 rounded-xl px-4 py-3 text-on-surface placeholder:text-outline-variant/50 transition-all outline-none" 
+                  placeholder="e.g., 1000000" 
+                  type="number"
+                />
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex justify-between pt-8 border-t border-outline-variant/20">
+              <button className="px-8 py-3 text-on-surface-variant font-label text-xs uppercase tracking-widest hover:text-on-surface transition-colors">
+                Save Draft
+              </button>
+              <div className="flex gap-4">
+                <button className="px-8 py-3 bg-surface-container-low text-on-surface font-label text-xs uppercase tracking-widest rounded-xl hover:bg-surface-container transition-colors">
+                  Next Step
+                </button>
+                <button className="px-8 py-3 bg-gradient-to-r from-primary to-primary-dim text-on-primary font-label text-xs uppercase tracking-widest rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">
+                  Continue
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
 
-        {/* Progress */}
-        <div className="mb-12">
-          <div className="flex items-center justify-between">
-            {[1, 2, 3, 4].map((s) => (
-              <div key={s} className="flex items-center">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold ${
-                  step >= s ? "bg-primary text-white" : "bg-surface-container text-on-surface-variant"
-                }`}>
-                  {s}
-                </div>
-                {s < totalSteps && (
-                  <div className={`w-32 h-1 mx-2 ${step > s ? "bg-primary" : "bg-surface-container"}`} />
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="flex justify-between mt-2 text-sm">
-            <span className={step >= 1 ? "text-primary" : "text-on-surface-variant"}>Business Info</span>
-            <span className={step >= 2 ? "text-primary" : "text-on-surface-variant"}>Financials</span>
-            <span className={step >= 3 ? "text-primary" : "text-on-surface-variant"}>Documents</span>
-            <span className={step >= 4 ? "text-primary" : "text-on-surface-variant"}>Review</span>
-          </div>
-        </div>
-
-        {/* Form */}
-        <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
-          {step === 1 && (
-            <div className="space-y-6">
-              <h2 className="text-xl font-semibold mb-6">Business Information</h2>
-              <div className="space-y-2">
-                <label className="text-sm font-medium uppercase tracking-wider text-slate-500">Business Name *</label>
-                <input type="text" placeholder="Enter your business name" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary" />
-              </div>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium uppercase tracking-wider text-slate-500">Industry *</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary">
-                    <option>Select Industry</option>
-                    <option>Technology</option>
-                    <option>Food & Beverage</option>
-                    <option>Manufacturing</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium uppercase tracking-wider text-slate-500">Listing Type *</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary">
-                    <option>For Sale</option>
-                    <option>Fundraising</option>
-                    <option>Partner</option>
-                  </select>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium uppercase tracking-wider text-slate-500">Description *</label>
-                <textarea rows={5} placeholder="Describe your business..." className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary resize-none" />
-              </div>
+        {/* Right Sidebar - Help */}
+        <aside className="w-full lg:w-80">
+          <div className="sticky top-32 bg-surface-container-low rounded-2xl p-8 space-y-8">
+            <div className="text-center">
+              <span className="material-symbols-outlined text-4xl text-primary mb-4">support_agent</span>
+              <h3 className="text-lg font-semibold text-on-surface mb-2">Need Assistance?</h3>
+              <p className="text-sm text-on-surface-variant font-light">
+                Our concierge team is available to help you complete your listing submission.
+              </p>
             </div>
-          )}
-
-          {step === 2 && (
-            <div className="space-y-6">
-              <h2 className="text-xl font-semibold mb-6">Financial Information</h2>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium uppercase tracking-wider text-slate-500">Valuation (THB)</label>
-                  <input type="text" placeholder="฿85,000,000" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium uppercase tracking-wider text-slate-500">Target Amount (THB)</label>
-                  <input type="text" placeholder="฿15,000,000" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary" />
-                </div>
-              </div>
-            </div>
-          )}
-
-          {step === 3 && (
-            <div className="space-y-6">
-              <h2 className="text-xl font-semibold mb-6">Upload Documents</h2>
-              <div className="border-2 border-dashed border-slate-300 rounded-xl p-12 text-center">
-                <span className="material-symbols-outlined text-5xl text-slate-400 mb-4">upload_file</span>
-                <p className="text-slate-500 mb-2">Drag and drop files here, or click to browse</p>
-                <p className="text-xs text-slate-400">PDF, DOC, XLS up to 10MB each</p>
-              </div>
-            </div>
-          )}
-
-          {step === 4 && (
-            <div className="space-y-6">
-              <h2 className="text-xl font-semibold mb-6">Review & Submit</h2>
-              <div className="bg-surface-container rounded-xl p-6 space-y-4">
-                <div className="flex justify-between py-3 border-b border-slate-200">
-                  <span className="text-slate-500">Business Name</span>
-                  <span className="font-medium">Premium Restaurant</span>
-                </div>
-                <div className="flex justify-between py-3 border-b border-slate-200">
-                  <span className="text-slate-500">Industry</span>
-                  <span className="font-medium">Food & Beverage</span>
-                </div>
-                <div className="flex justify-between py-3">
-                  <span className="text-slate-500">Valuation</span>
-                  <span className="font-medium">฿85,000,000</span>
-                </div>
-              </div>
-              <label className="flex items-start gap-3 p-4 bg-blue-50 rounded-xl">
-                <input type="checkbox" className="mt-1" />
-                <span className="text-sm text-slate-600">I confirm that all information provided is accurate and I agree to the Terms of Service.</span>
-              </label>
-            </div>
-          )}
-
-          {/* Actions */}
-          <div className="flex justify-between mt-8 pt-6 border-t border-slate-200">
-            <button 
-              onClick={() => setStep(step - 1)}
-              disabled={step === 1}
-              className="px-6 py-3 rounded-xl font-medium text-sm uppercase tracking-wider bg-surface-container text-slate-500 hover:bg-surface-container-high disabled:opacity-50"
-            >
-              ← Back
+            <button className="w-full py-3 bg-white border border-outline-variant/20 text-on-surface font-label text-xs uppercase tracking-widest rounded-xl hover:bg-surface-container transition-colors">
+              Schedule Call
             </button>
-            {step < totalSteps ? (
-              <button 
-                onClick={() => setStep(step + 1)}
-                className="px-8 py-3 rounded-xl font-medium text-sm uppercase tracking-wider bg-primary text-white shadow-md hover:shadow-lg transition-all"
-              >
-                Continue →
-              </button>
-            ) : (
-              <button 
-                onClick={handleSubmit}
-                className="px-8 py-3 rounded-xl font-medium text-sm uppercase tracking-wider bg-green-600 text-white shadow-md hover:shadow-lg transition-all"
-              >
-                Submit Listing
-              </button>
-            )}
+            <div className="pt-6 border-t border-outline-variant/10">
+              <h4 className="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4">Required Documents</h4>
+              <ul className="space-y-3 text-sm text-on-surface-variant">
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                  Business Registration
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                  Financial Statements
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                  Executive Summary
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </aside>
       </main>
     </div>
   );

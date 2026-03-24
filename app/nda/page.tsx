@@ -1,100 +1,148 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 
 export default function NDAPage() {
-  const [agreed, setAgreed] = useState(false);
-  const [signed, setSigned] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSign = async () => {
-    if (!agreed) return;
-    setLoading(true);
-    // Simulate signing
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setSigned(true);
-    setLoading(false);
-  };
-
-  if (signed) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-8">
-        <div className="max-w-2xl text-center space-y-8">
-          <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-            <span className="material-symbols-outlined text-6xl text-green-600">check_circle</span>
-          </div>
-          <h1 className="text-4xl font-light">NDA Signed Successfully</h1>
-          <p className="text-on-surface-variant">You now have access to the confidential data room.</p>
-          <Link href="/data-room" className="inline-block bg-primary text-on-primary px-8 py-4 rounded-xl font-semibold text-sm uppercase tracking-widest">
-            Access Data Room
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  const activeNDAs = [
+    { id: 1, listing: "EcoStream Logistics", status: "Active", signedDate: "Mar 15, 2024", expiresDate: "Mar 15, 2025" },
+    { id: 2, listing: "NeoBank Siam", status: "Active", signedDate: "Mar 10, 2024", expiresDate: "Mar 10, 2025" },
+    { id: 3, listing: "Premium Restaurant - Sukhumvit", status: "Pending", signedDate: "-", expiresDate: "-" },
+  ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <nav className="bg-white/70 backdrop-blur-xl docked full-width top-0 sticky z-50">
-        <div className="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-          <div className="text-xl font-bold tracking-tighter text-blue-950">Aureus Capital</div>
-          <div className="flex items-center gap-4">
-            <Link href="/auth" className="text-blue-900 font-semibold text-xs uppercase tracking-widest">Login</Link>
-          </div>
+    <div className="min-h-screen bg-background text-on-surface font-body">
+      {/* SideNavBar */}
+      <aside className="h-screen w-64 fixed left-0 top-0 border-r border-slate-200/50 bg-slate-50 flex flex-col p-6 space-y-8 z-50">
+        <div className="flex flex-col">
+          <span className="text-lg font-bold text-blue-900">Aureus Capital</span>
+          <span className="font-['Lexend'] text-sm font-light text-blue-900">Premium Concierge</span>
         </div>
-      </nav>
-
-      <main className="max-w-3xl mx-auto px-8 py-16">
-        <div className="text-center mb-12">
-          <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="material-symbols-outlined text-5xl text-primary">security</span>
-          </div>
-          <h1 className="text-4xl font-light tracking-tight text-on-surface mb-4">
-            Confidential Access Request
-          </h1>
-          <p className="text-lg text-on-surface-variant">
-            This listing requires NDA confirmation before accessing sensitive information.
-          </p>
-        </div>
-
-        {/* NDA Document */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-8">
-          <div className="bg-surface-container px-8 py-4 border-b border-slate-100">
-            <h2 className="font-semibold">Non-Disclosure Agreement</h2>
-          </div>
-          <div className="p-8 h-64 overflow-y-auto text-sm text-on-surface-variant space-y-4">
-            <p><strong>1. Definition of Confidential Information</strong><br/>Confidential Information means any information disclosed by the Company to the Recipient.</p>
-            <p><strong>2. Obligations of Recipient</strong><br/>The Recipient agrees to hold the Confidential Information in strict confidence.</p>
-            <p><strong>3. Term</strong><br/>This Agreement shall remain in effect for a period of two (2) years from the date of signing.</p>
-            <p><strong>4. Governing Law</strong><br/>This Agreement shall be governed by the laws of Thailand.</p>
-          </div>
-        </div>
-
-        {/* Agreement Checkbox */}
-        <label className="flex items-start gap-4 p-6 bg-surface-container rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors mb-8">
-          <input 
-            type="checkbox" 
-            checked={agreed}
-            onChange={(e) => setAgreed(e.target.checked)}
-            className="mt-1 w-5 h-5 rounded border-outline text-primary" 
-          />
-          <span className="text-sm text-on-surface-variant">
-            I have read and agree to the terms of the Non-Disclosure Agreement. 
-            I understand that disclosing confidential information is prohibited.
-          </span>
-        </label>
-
-        {/* Sign Button */}
-        <button 
-          onClick={handleSign}
-          disabled={!agreed || loading}
-          className="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary py-5 rounded-xl font-semibold text-sm uppercase tracking-widest shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {loading ? "Processing..." : "Sign NDA Digitally"}
+        <button className="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary py-3 rounded-xl font-medium shadow-sm transition-transform active:scale-95">
+          New Request
         </button>
+        <nav className="flex-1 space-y-2">
+          <Link href="/dashboard" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1">
+            <span className="material-symbols-outlined">dashboard</span>
+            <span className="font-['Lexend'] text-sm font-light">Dashboard</span>
+          </Link>
+          <Link href="/marketplace" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1">
+            <span className="material-symbols-outlined">account_balance</span>
+            <span className="font-['Lexend'] text-sm font-light">Investments</span>
+          </Link>
+          <Link href="/nda" className="flex items-center gap-3 px-4 py-3 bg-white text-blue-900 shadow-sm rounded-lg font-medium transition-transform duration-200 hover:translate-x-1">
+            <span className="material-symbols-outlined">verified_user</span>
+            <span className="font-['Lexend'] text-sm font-light">NDA Access</span>
+          </Link>
+          <Link href="/messages" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1">
+            <span className="material-symbols-outlined">mail</span>
+            <span className="font-['Lexend'] text-sm font-light">Messages</span>
+          </Link>
+          <Link href="/profile" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1">
+            <span className="material-symbols-outlined">settings</span>
+            <span className="font-['Lexend'] text-sm font-light">Settings</span>
+          </Link>
+        </nav>
+        <div className="pt-6 border-t border-slate-200 space-y-2">
+          <Link href="#" className="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1">
+            <span className="material-symbols-outlined">help</span>
+            <span className="font-['Lexend'] text-sm font-light">Support</span>
+          </Link>
+          <Link href="/" className="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1">
+            <span className="material-symbols-outlined">logout</span>
+            <span className="font-['Lexend'] text-sm font-light">Sign Out</span>
+          </Link>
+        </div>
+      </aside>
+
+      {/* Main Content */}
+      <main className="ml-64 min-h-screen p-10 pb-24">
+        <header className="mb-12">
+          <div className="flex items-center gap-4 mb-4">
+            <span className="material-symbols-outlined text-primary text-3xl">verified_user</span>
+            <h1 className="text-4xl font-light tracking-tight text-on-surface">NDA Access Gate</h1>
+          </div>
+          <p className="text-on-surface-variant font-light text-lg">Manage your confidentiality agreements.</p>
+        </header>
+
+        {/* NDA Info Banner */}
+        <div className="bg-tertiary-container/50 rounded-2xl p-8 mb-12 flex items-start gap-6">
+          <span className="material-symbols-outlined text-tertiary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>gavel</span>
+          <div>
+            <h3 className="text-lg font-semibold text-on-surface mb-2">Confidentiality Agreements</h3>
+            <p className="text-on-surface-variant font-light">
+              All NDAs are digitally executed and legally binding under Thai law. Each agreement grants access to detailed deal information, financial documents, and direct communication with listing owners.
+            </p>
+          </div>
+        </div>
+
+        {/* NDA List */}
+        <div>
+          <h2 className="text-xl font-semibold text-on-surface mb-6">Your NDA Agreements</h2>
+          <div className="space-y-4">
+            {activeNDAs.map((nda) => (
+              <div key={nda.id} className="bg-surface-container-low rounded-2xl p-8 hover:shadow-xl transition-all">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-6">
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${nda.status === 'Active' ? 'bg-green-100 text-green-700' : nda.status === 'Pending' ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-500'}`}>
+                      <span className="material-symbols-outlined">{nda.status === 'Active' ? 'check_circle' : 'pending'}</span>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-lg font-semibold text-on-surface">{nda.listing}</h3>
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${nda.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
+                          {nda.status}
+                        </span>
+                      </div>
+                      <div className="flex gap-6 text-sm text-on-surface-variant">
+                        {nda.status === 'Active' ? (
+                          <>
+                            <span>Signed: {nda.signedDate}</span>
+                            <span>Expires: {nda.expiresDate}</span>
+                          </>
+                        ) : (
+                          <span>Pending signature</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    {nda.status === 'Active' && (
+                      <>
+                        <button className="px-6 py-3 bg-surface-container-lowest text-on-surface rounded-xl font-label text-xs uppercase tracking-widest font-medium hover:bg-surface-bright transition-colors border border-outline-variant/10">
+                          View PDF
+                        </button>
+                        <Link href={`/listing/${nda.id}`} className="px-6 py-3 bg-primary text-on-primary rounded-xl font-label text-xs uppercase tracking-widest font-bold hover:bg-primary-dim transition-colors">
+                          Access Data
+                        </Link>
+                      </>
+                    )}
+                    {nda.status === 'Pending' && (
+                      <button className="px-6 py-3 bg-primary text-on-primary rounded-xl font-label text-xs uppercase tracking-widest font-bold hover:bg-primary-dim transition-colors">
+                        Sign Now
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
+
+      {/* Concierge HUD */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <div className="bg-glass rounded-2xl shadow-xl border border-white/20 p-4 flex items-center gap-6">
+          <div className="flex flex-col">
+            <span className="text-[10px] uppercase tracking-widest text-primary font-bold">Concierge Online</span>
+            <span className="text-xs font-light text-on-surface">Awaiting your instruction.</span>
+          </div>
+          <div className="flex gap-2">
+            <button className="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-md">
+              <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>support_agent</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
